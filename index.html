@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="color-scheme" content="light dark">
 <meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="theme-color" content="#5b3df5"><meta name="description" content="Ôn tập Tin học 11 – Luyện tập &amp; Thi thử"><link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="icon-180.png"><link rel="icon" href="icon-192.png"><meta name="apple-mobile-web-app-title" content="Tin học 11"><meta name="format-detection" content="telephone=no">
-<title>Ôn tập Tin học – Luyện tập & Thi thử</title>
+<meta name="theme-color" content="#5b3df5"><meta name="description" content="Ôn tập Hóa học 11 – Nitrogen, Sulfur: Luyện tập &amp; Thi thử"><link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="icon-180.png"><link rel="icon" href="icon-192.png"><meta name="apple-mobile-web-app-title" content="Hóa học 11"><meta name="format-detection" content="telephone=no">
+<title>Ôn tập Hóa học 11 – Luyện tập & Thi thử</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
 <style>
@@ -226,18 +226,80 @@ h1{font-family:var(--f-head);font-weight:800;font-size:clamp(1.9rem,5vw,2.6rem);
  .ring,.ring svg{width:170px;height:170px}.ring svg{stroke-width:12}.ring .c b{font-size:2.6rem}
 }
 @media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+/* ===== bổ sung cho bộ đề Hóa học ===== */
+.lead{color:var(--muted);max-width:62ch;overflow-wrap:anywhere}
+sub,sup{font-size:.72em;line-height:0;position:relative;vertical-align:baseline;font-family:inherit}
+sub{bottom:-.26em}sup{top:-.5em}
+.tt{font-family:var(--f-mono);font-size:.72rem;font-weight:700;padding:4px 10px;border-radius:99px;border:2px solid var(--bd);background:var(--surface2);letter-spacing:.02em;white-space:nowrap}
+.tt.mcq{background:var(--lime);color:var(--lime-ink)}
+.tt.tf{background:var(--acc);color:var(--acc-ink)}
+.tt.short{background:var(--warnbg);color:var(--warn);border-color:var(--warn)}
+.qtext{overflow-wrap:anywhere}
+.tfrows{display:grid;gap:12px}
+.tfrow{display:grid;grid-template-columns:34px minmax(0,1fr);gap:10px 14px;align-items:start;padding:14px 16px;border:2px solid var(--bd);border-radius:16px;background:var(--surface);transition:background .25s,border-color .25s}
+.tfrow .k{width:34px;height:34px;border-radius:11px;border:2px solid var(--bd);display:grid;place-items:center;font-family:var(--f-mono);font-weight:700;background:var(--surface2)}
+.tfrow .stx{padding-top:3px;overflow-wrap:anywhere}
+.tfbtns{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.tfb{padding:10px 12px;border:2px solid var(--bd);border-radius:12px;font-weight:700;background:var(--surface2);box-shadow:2px 2px 0 var(--sh);transition:transform .15s var(--ease),box-shadow .15s var(--ease),background .2s}
+.tfb:hover:not([disabled]){transform:translate(-1px,-1px);box-shadow:4px 4px 0 var(--sh)}
+.tfb:active:not([disabled]){transform:translate(2px,2px);box-shadow:0 0 0 var(--sh)}
+.tfb.sel{background:var(--acc);color:var(--acc-ink);border-color:var(--acc);box-shadow:2px 2px 0 var(--acc)}
+.tfb.ok{background:var(--ok);color:#fff;border-color:var(--ok);box-shadow:2px 2px 0 var(--ok)}
+.tfb.bad{background:var(--bad);color:#fff;border-color:var(--bad);box-shadow:2px 2px 0 var(--bad)}
+.tfb.dim{opacity:.5}.tfb[disabled]{cursor:default}
+.tfrow.ok{background:var(--okbg);border-color:var(--ok)}
+.tfrow.bad{background:var(--badbg);border-color:var(--bad)}
+.tfnote{grid-column:1/-1;font-size:.93rem;padding-top:2px}
+.tfrow.static .tfnote{padding-left:0}
+.vb{font-family:var(--f-mono);font-size:.72rem;font-weight:700;padding:3px 9px;border-radius:99px;border:2px solid var(--bd);margin-right:6px;white-space:nowrap}
+.vb.t{background:var(--okbg);color:var(--ok);border-color:var(--ok)}.vb.f{background:var(--badbg);color:var(--bad);border-color:var(--bad)}
+.shortrow{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.sa{flex:1;min-width:190px;padding:14px 16px;border:2px solid var(--bd);border-radius:16px;font:inherit;font-family:var(--f-mono);font-weight:700;font-size:1.25rem;background:var(--surface);color:var(--ink);box-shadow:3px 3px 0 var(--sh);transition:box-shadow .2s,border-color .2s}
+.sa:focus{outline:3px solid var(--acc);outline-offset:2px;border-color:var(--acc)}
+.sa:disabled{opacity:.8;background:var(--surface2)}
+.sa.shake{animation:shake .45s;border-color:var(--bad)}
+.unit{font-weight:700;color:var(--muted)}
+.hint{color:var(--muted);font-size:.85rem;margin-top:10px}
+.ansline{margin-top:6px;font-size:1.05rem}.ansline b{display:inline;font-family:var(--f-mono)}
+.fb .ansline b{color:inherit}
+.chips.types .chip{display:inline-flex;align-items:center;gap:6px}
+.field{width:100%;padding:13px 16px;border:2px solid var(--bd);border-radius:14px;font:inherit;background:var(--surface);color:var(--ink);box-shadow:3px 3px 0 var(--sh)}
+.field:focus{outline:3px solid var(--acc);outline-offset:2px}
+.start .btns{display:flex;gap:12px;flex-wrap:wrap}
+.start .btn.sec{font-size:1rem;padding:14px 20px}
+.kview{display:grid;gap:14px;margin-bottom:18px}
+.rvi.static .opt{padding:10px 14px}
+.rvi .tfrows{gap:10px}.rvi .tfrow{padding:10px 12px}
+.rvi .shortbox{padding:12px 14px;border:2px solid var(--bd);border-radius:14px;background:var(--surface2);margin-bottom:10px}
+.rvi .shortbox.ok{background:var(--okbg);border-color:var(--ok)}.rvi .shortbox.bad{background:var(--badbg);border-color:var(--bad)}
+.rvi .shortbox small{color:var(--muted);display:block}
+.rvi .shortbox b{font-family:var(--f-mono)}
+.nb.part{background:var(--warn);color:#16131f;border-color:var(--warn)}
+@media print{
+ :root,[data-theme=dark]{--bg:#fff;--surface:#fff;--surface2:#f1f1f1;--ink:#000;--muted:#444;--bd:#000;--sh:transparent;--okbg:#e6f6ea;--badbg:#fde6ea;--warnbg:#fff4d6;--ok:#116b33;--bad:#b4143a;--warn:#9a5a00}
+ body::before,.blob,.nav .tools,.noprint,.qtop,.qbar{display:none!important}
+ body{background:#fff;color:#000;font-size:12px}
+ .wrap{max-width:none;padding:0}
+ .card{box-shadow:none;break-inside:avoid;border-width:1px}
+ .rvi{animation:none!important;padding:12px}
+ .rv{gap:10px}
+}
+
 </style>
 </head>
 <body>
 <div class="blob b1"></div><div class="blob b2"></div>
 <div class="wrap" id="app"></div>
 <script>
-const Q = [{"id": 1, "q": "Nhóm chức năng nào sau đây KHÔNG phải là chức năng cơ bản của hệ điều hành máy tính?", "o": ["Quản lí thiết bị (CPU, bộ nhớ, thiết bị ngoại vi).", "Quản lí việc lưu trữ dữ liệu (tệp và thư mục).", "Cung cấp môi trường giao tiếp với người sử dụng.", "Sửa chữa các linh kiện phần cứng khi bị hư hỏng vật lí."], "a": 3, "lesson": "Bài 1: Hệ điều hành", "note": "HĐH có 5 nhóm chức năng, không bao gồm sửa chữa hư hỏng vật lí của phần cứng."}, {"id": 2, "q": "Quá trình hình thành và phát triển của hệ điều hành máy tính cá nhân gắn liền với tiêu chí thân thiện, dễ sử dụng và được thể hiện rõ nhất ở hai đặc điểm nào sau đây?", "o": ["Giao diện dòng lệnh và cơ chế tự động sao lưu.", "Giao diện đồ họa và cơ chế “plug & play” (cắm và chạy).", "Chỉ sử dụng chuột và không cần dùng bàn phím.", "Tốc độ xử lí siêu nhanh và dung lượng bộ nhớ không giới hạn."], "a": 1, "lesson": "Bài 1: Hệ điều hành", "note": "Hai đặc điểm thể hiện sự thân thiện của HĐH máy tính cá nhân: giao diện đồ họa và cơ chế “plug & play” (cắm là chạy)."}, {"id": 3, "q": "Phát biểu nào sau đây là ĐÚNG khi nói về các hệ điều hành thông dụng hiện nay?", "o": ["Windows là hệ điều hành nguồn mở, còn Linux là hệ điều hành thương mại.", "Hệ điều hành Android dành cho thiết bị di động được xây dựng trên lõi của Linux.", "Hệ điều hành iOS của Apple là hệ điều hành nguồn mở miễn phí cho mọi hãng điện thoại.", "Các phiên bản như Ubuntu, RedHat, Suse được phát triển từ hệ điều hành Windows."], "a": 1, "lesson": "Bài 1: Hệ điều hành", "note": "Android được xây dựng trên lõi của Linux (nguồn mở); còn Windows, macOS, iOS là hệ điều hành thương mại."}, {"id": 4, "q": "Sự khác biệt cơ bản của hệ điều hành cho thiết bị di động (như iOS, Android) so với hệ điều hành cho máy tính cá nhân là gì?", "o": ["Giao diện đặc biệt thân thiện nhờ nhận dạng hành vi người dùng qua các cảm biến, dễ dàng kết nối mạng di động và có nhiều tiện ích hỗ trợ cá nhân.", "Chỉ cho phép chạy một chương trình duy nhất tại một thời điểm và không có kết nối không dây.", "Bắt buộc người dùng phải nhập các câu lệnh bằng văn bản trên màn hình dòng lệnh.", "Không hỗ trợ lắp đặt thêm các ứng dụng giải trí hay quản lí thông tin cá nhân."], "a": 0, "lesson": "Bài 1: Hệ điều hành", "note": "HĐH thiết bị di động nhận dạng hành vi qua cảm biến, dễ kết nối mạng di động và có nhiều tiện ích hỗ trợ cá nhân."}, {"id": 5, "q": "Trong hệ điều hành Windows, tiện ích nào sau đây được dùng để quản lí tệp và thư mục?", "o": ["Disk Cleanup.", "File Explorer.", "Microsoft Edge.", "Optimize Drives."], "a": 1, "lesson": "Bài 2: Thực hành HĐH", "note": "Tiện ích quản lí tệp và thư mục trên Windows là File Explorer."}, {"id": 6, "q": "Trên màn hình làm việc chính của Windows, thanh nằm ở cạnh dưới màn hình chứa nút Start và biểu tượng các chương trình đang chạy được gọi là gì?", "o": ["Thanh tiêu đề (Title bar).", "Thanh công việc (Taskbar).", "Thanh công cụ (Toolbar).", "Vùng làm việc (Workspace)."], "a": 1, "lesson": "Bài 2: Thực hành HĐH", "note": "Thanh ở cạnh dưới màn hình chứa nút Start và các ứng dụng đang mở là Thanh công việc (Taskbar)."}, {"id": 7, "q": "Khi thực hành nâng cao hiệu quả sử dụng đĩa cứng trên hệ điều hành Windows (trong cửa sổ Properties -> chọn thẻ Tools), chức năng hợp mảnh (Optimize / Defragment) có tác dụng chính là gì?", "o": ["Xóa toàn bộ các tệp tin hệ thống để giải phóng dung lượng bộ nhớ RAM.", "Tổ chức lại các tệp sao cho các liên cung (cluster) của một tệp được ghi liên tục, giúp giảm thời gian dịch chuyển đầu từ và tăng tốc độ truy cập đĩa từ.", "Tăng kích thước vật lí của màn hình và độ phân giải của máy in.", "Tự động tải và cài đặt các phần mềm nguồn mở từ Internet."], "a": 1, "lesson": "Bài 2: Thực hành HĐH", "note": "Optimize / Defragment (Hợp mảnh) gom các liên cung (cluster) của tệp ghi liên tục trên đĩa từ (HDD), giúp tăng tốc độ đọc/ghi."}, {"id": 8, "q": "Phần mềm nguồn mở (Open-source software) là loại phần mềm nào sau đây?", "o": ["Phần mềm được bán dưới dạng mã máy (nguồn đóng) để bảo vệ ý tưởng và chống sửa đổi.", "Phần mềm chỉ cho phép dùng thử miễn phí trong 30 ngày, sau đó phải mua bản quyền.", "Phần mềm được cung cấp cả mã nguồn để người dùng có thể tự sửa đổi, cải tiến, phát triển và phân phối lại theo giấy phép quy định.", "Phần mềm được thiết kế riêng theo đơn đặt hàng (“may-đo”) của một doanh nghiệp cụ thể."], "a": 2, "lesson": "Bài 3: Phần mềm nguồn mở", "note": "Phần mềm nguồn mở cung cấp cả mã nguồn để người dùng tự sửa đổi, cải tiến, phát triển và phân phối lại theo giấy phép."}, {"id": 9, "q": "Trong các phần mềm dưới đây, cặp phần mềm nào gồm một phần mềm thương mại (nguồn đóng) và một phần mềm nguồn mở có cùng chức năng tương ứng?", "o": ["Microsoft Word và Microsoft Excel.", "Adobe Photoshop và GIMP (hoặc bộ Microsoft Office và bộ OpenOffice).", "Hệ điều hành Windows và hệ điều hành iOS.", "Google Chrome và File Explorer."], "a": 1, "lesson": "Bài 3: Phần mềm nguồn mở", "note": "Cặp thương mại ↔ nguồn mở tương ứng: Photoshop ↔ GIMP; Word/Excel/PowerPoint ↔ Writer/Calc/Impress (OpenOffice); Oracle/SQL Server ↔ MySQL/PostgreSQL."}, {"id": 10, "q": "Nội dung nào sau đây là một quy định quan trọng của Giấy phép công cộng GNU GPL (GNU General Public License) đối với phần mềm nguồn mở?", "o": ["Cấm người dùng sao chép hoặc phân phối lại phần mềm dưới mọi hình thức.", "Tác giả ban đầu phải chịu hoàn toàn trách nhiệm bồi thường nếu người dùng tự ý sửa mã nguồn gây lỗi.", "Người sửa đổi và phân phối bản sửa đổi phải công bố rõ mã nguồn phần đã sửa và áp dụng giấy phép GNU GPL cho chính phần thay đổi đó.", "Mọi phần mềm sửa đổi từ phần mềm GNU GPL đều bắt buộc phải chuyển thành phần mềm nguồn đóng để bán."], "a": 2, "lesson": "Bài 3: Phần mềm nguồn mở", "note": "Giấy phép GNU GPL bắt buộc người sửa đổi khi phân phối bản sửa đổi phải công bố rõ mã nguồn phần sửa và áp dụng giấy phép GPL cho phần thay đổi đó."}, {"id": 11, "q": "Phần mềm chạy trên Internet (phần mềm trực tuyến) như Google Docs, Google Sheets, Google Slides có ưu điểm nổi bật nào sau đây?", "o": ["Cho phép sử dụng ở bất cứ đâu, trên bất cứ máy tính nào miễn là có kết nối Internet mà không cần cài đặt trước vào máy, chi phí rẻ hoặc không mất phí.", "Chỉ có thể sử dụng trên một máy tính cố định đã mua đĩa cài đặt bản quyền.", "Hoạt động hoàn toàn không cần kết nối mạng Internet trong mọi trường hợp.", "Dung lượng chiếm dụng ổ cứng máy tính cá nhân rất lớn (hàng trăm GB)."], "a": 0, "lesson": "Bài 3: Phần mềm nguồn mở", "note": "Phần mềm chạy trên Internet (trực tuyến) dùng ở bất cứ đâu có kết nối mạng mà không cần cài đặt vào máy, chi phí rẻ hoặc miễn phí."}, {"id": 12, "q": "Bộ xử lí trung tâm (CPU - Central Processing Unit) được cấu tạo từ hai bộ phận chính nào sau đây?", "o": ["Bộ nhớ RAM và Bộ nhớ ROM.", "Bộ số học và lôgic (ALU) và Bộ điều khiển (Control Unit - CU).", "Bảng mạch chính (Mainboard) và Đĩa cứng (HDD/SSD).", "Thiết bị vào và Thiết bị ra."], "a": 1, "lesson": "Bài 4: Bên trong máy tính", "note": "CPU gồm 2 bộ phận chính: Bộ số học và lôgic (ALU) và Bộ điều khiển (Control Unit - CU)."}, {"id": 13, "q": "Thông số nào sau đây thường được dùng để đánh giá tốc độ xử lí của CPU?", "o": ["Độ phân giải tính bằng dpi (dots per inch).", "Tần số đồng hồ xung, thường tính bằng đơn vị GHz (tỉ xung một giây).", "Độ dài đường chéo tính bằng đơn vị inch.", "Dung lượng lưu trữ tính bằng đơn vị TB (Terabyte)."], "a": 1, "lesson": "Bài 4: Bên trong máy tính", "note": "Tốc độ CPU đo bằng tần số đồng hồ xung, đơn vị GHz (tỉ xung/giây)."}, {"id": 14, "q": "Khi so sánh bộ nhớ trong RAM và ROM, phát biểu nào sau đây là ĐÚNG?", "o": ["RAM là bộ nhớ chỉ đọc và giữ được dữ liệu lâu dài khi tắt máy; còn ROM sẽ bị mất hết dữ liệu khi tắt máy.", "RAM dùng để ghi dữ liệu tạm thời khi chạy chương trình và bị xóa khi tắt máy; còn ROM chỉ đọc, không cần nguồn nuôi và lưu dữ liệu hệ thống cố định.", "Cả RAM và ROM đều là các thiết bị bộ nhớ ngoài có dung lượng hàng chục TB.", "ROM thường có dung lượng lớn hơn rất nhiều và thời gian truy cập nhanh hơn RAM."], "a": 1, "lesson": "Bài 4: Bên trong máy tính", "note": "RAM ghi dữ liệu tạm thời khi chạy chương trình, tắt máy là bị xóa; ROM chỉ đọc, không cần nguồn nuôi, lưu dữ liệu hệ thống cố định."}, {"id": 15, "q": "Cho hai đại lượng lôgic x = 1 và y = 0. Kết quả của các phép toán lôgic (x AND y), (x OR y) và (x XOR y) lần lượt là:", "o": ["1, 1 và 0.", "0, 1 và 1.", "0, 0 và 1.", "1, 0 và 1."], "a": 1, "lesson": "Bài 4: Bên trong máy tính", "note": "Với x = 1, y = 0: 1 AND 0 = 0; 1 OR 0 = 1; 1 XOR 0 = 1 (XOR bằng 1 khi hai giá trị khác nhau)."}, {"id": 16, "q": "Thực hiện phép cộng hai số nhị phân 1011 + 101 (tương ứng trong hệ thập phân là 11 + 5). Kết quả thu được trong hệ nhị phân là:", "o": ["10000.", "11110.", "10100.", "11000."], "a": 0, "lesson": "Bài 4: Bên trong máy tính", "note": "Cộng nhị phân: 1011 (11) + 101 (5) = 10000 (16). Mở rộng (SGK tr.26): 1010 + 101 = 1111 (15); 1001 + 1011 = 10100 (20)."}, {"id": 17, "q": "Hai thông số quan trọng nhất của thiết bị chuột máy tính là gì?", "o": ["Kích thước đường chéo (inch) và tần số quét (Hz).", "Phương thức kết nối (có dây hoặc không dây) và độ phân giải đo bằng dpi (dots per inch).", "Tốc độ in (số trang/phút) và khổ giấy A4.", "Dung lượng lưu trữ (GB) và thời gian truy cập trung bình."], "a": 1, "lesson": "Bài 5: Kết nối thiết bị số", "note": "Hai thông số quan trọng nhất của chuột: phương thức kết nối (có dây/không dây) và độ phân giải (dpi)."}, {"id": 18, "q": "Trong các thông số của màn hình máy tính, thông số nào cho biết số lần hiển thị lại hình ảnh trong một giây (thường là 60 Hz, 75 Hz, 100 Hz) giúp ảnh không bị giật và đỡ mỏi mắt?", "o": ["Kích thước màn hình (inch).", "Độ phân giải (pixel).", "Tần số quét (Hz).", "Thời gian phản hồi (ms)."], "a": 2, "lesson": "Bài 5: Kết nối thiết bị số", "note": "Tần số quét (Hz) là số lần hiển thị lại hình ảnh trong 1 giây, giúp ảnh không bị giật và đỡ mỏi mắt."}, {"id": 19, "q": "Loại máy in nào sau đây sử dụng một hàng kim gõ vào băng mực để lại vết trên giấy và vẫn được dùng phổ biến để in hóa đơn có nhiều liên?", "o": ["Máy in laser.", "Máy in phun.", "Máy in nhiệt.", "Máy in kim (máy in ma trận)."], "a": 3, "lesson": "Bài 5: Kết nối thiết bị số", "note": "Máy in kim (ma trận) dùng hàng kim gõ qua băng mực, chuyên dùng để in hóa đơn có nhiều liên."}, {"id": 20, "q": "Khi kết nối máy tính với màn hình hoặc máy chiếu, cổng kết nối nào sau đây truyền tín hiệu số và cho phép truyền đồng thời cả âm thanh lẫn hình ảnh với độ phân giải cao?", "o": ["Cổng VGA.", "Cổng HDMI.", "Cổng mạng RJ45 (Cổng F).", "Cổng PS/2."], "a": 1, "lesson": "Bài 5: Kết nối thiết bị số", "note": "Cổng HDMI truyền tín hiệu số đồng thời cả âm thanh và hình ảnh độ phân giải cao (VGA chỉ truyền hình ảnh tương tự, không có âm thanh)."}, {"id": 21, "q": "Dịch vụ lưu trữ và chia sẻ tệp tin trên Internet (ổ đĩa trực tuyến) iCloud và OneDrive lần lượt thuộc các nhà cung cấp nào sau đây?", "o": ["Google và Microsoft.", "Apple và Microsoft.", "Apple và Google.", "Dropbox và Apple."], "a": 1, "lesson": "Bài 6: Lưu trữ & chia sẻ tệp", "note": "Nhà cung cấp ổ đĩa trực tuyến: iCloud (Apple), OneDrive (Microsoft), Google Drive (Google), Dropbox (Dropbox)."}, {"id": 22, "q": "Khi chia sẻ một thư mục hoặc tệp tin trên ổ đĩa trực tuyến Google Drive cho các thành viên trong nhóm, chủ sở hữu có thể phân quyền cho người nhận theo ba chế độ nào sau đây?", "o": ["Quyền chỉ xem (Người xem); Quyền được nhận xét (Người nhận xét); Quyền chỉnh sửa (Người chỉnh sửa).", "Quyền mua; Quyền bán; Quyền cho thuê tệp tin.", "Quyền sao lưu; Quyền diệt virus; Quyền nâng cấp phần cứng.", "Quyền quản trị mạng; Quyền lập trình; Quyền khóa máy."], "a": 0, "lesson": "Bài 6: Lưu trữ & chia sẻ tệp", "note": "Ba chế độ phân quyền chia sẻ trên Google Drive: Chỉ xem (Người xem), Được nhận xét (Người nhận xét), Chỉnh sửa (Người chỉnh sửa)."}, {"id": 23, "q": "Trong ba chế độ chia sẻ tệp và thư mục trên Google Drive, quyền nào là quyền cao nhất cho phép người được chia sẻ xem, nhận xét và thực hiện mọi thao tác như chỉnh sửa, xóa, tạo mới hoặc đổi tên tệp?", "o": ["Quyền chỉ xem (Viewer).", "Quyền được nhận xét (Commenter).", "Quyền chỉnh sửa (Editor).", "Quyền khách truy cập ẩn danh."], "a": 2, "lesson": "Bài 6: Lưu trữ & chia sẻ tệp", "note": "Quyền chỉnh sửa (Editor) là quyền cao nhất: xem, nhận xét và thực hiện mọi thao tác (chỉnh sửa, xóa, tạo mới, đổi tên tệp/thư mục)."}, {"id": 24, "q": "Khi sử dụng máy tìm kiếm (như Google), để thu hẹp phạm vi tìm kiếm sao cho kết quả trả về chứa chính xác cả cụm từ khóa theo đúng trật tự từ, em cần sử dụng thủ thuật nào sau đây?", "o": ["Viết hoa toàn bộ các chữ cái trong từ khóa tìm kiếm.", "Đặt cụm từ khóa cần tìm ở trong cặp dấu nháy kép \" \".", "Đặt dấu chấm hỏi (?) vào sau mỗi từ trong cụm từ khóa.", "Xóa bớt các từ khóa quan trọng chỉ giữ lại một chữ cái đầu."], "a": 1, "lesson": "Bài 7: Tìm kiếm thông tin", "note": "Đặt từ khóa trong dấu nháy kép \" \" giúp thu hẹp phạm vi, tìm chính xác cụm từ."}, {"id": 25, "q": "Để tìm kiếm thông tin tuyển sinh của Đại học Đồng Tháp nhưng chỉ muốn kết quả trả về dưới dạng tệp tài liệu định dạng PDF, cú pháp từ khóa tìm kiếm nào sau đây là hiệu quả nhất?", "o": ["tuyển sinh \"Đại học Đồng Tháp\" + filetype:pdf", "tuyển sinh Đại học Đồng Tháp .mp4", "is:important Đại học Đồng Tháp", "http://drive.google.com Đại học Đồng Tháp"], "a": 0, "lesson": "Bài 7: Tìm kiếm thông tin", "note": "Tìm kiếm giới hạn theo định dạng tệp PDF dùng cú pháp: + filetype:pdf."}, {"id": 26, "q": "Trong dịch vụ thư điện tử Gmail, để hiển thị danh sách tất cả các thư điện tử đã được đánh dấu là thư quan trọng (dấu quan trọng màu vàng), em nhập cụm từ nào vào ô tìm kiếm thư?", "o": ["filetype:important", "is:important", "label:trash", "mail:yellow"], "a": 1, "lesson": "Bài 8: Thư điện tử & MXH", "note": "Tìm tất cả thư đánh dấu quan trọng trong Gmail dùng từ khóa: is:important."}, {"id": 27, "q": "Phát biểu nào sau đây là ĐÚNG khi nói về việc sử dụng Nhãn (Label) để sắp xếp, phân loại thư trong hộp thư Gmail?", "o": ["Nhãn hoàn toàn giống hệt thư mục, mỗi bức thư chỉ được phép gắn duy nhất 01 nhãn.", "Khi xóa một nhãn thì toàn bộ các bức thư có gắn nhãn đó cũng sẽ bị xóa vĩnh viễn khỏi hộp thư.", "Nhãn khác với thư mục; khi em xóa một thư thì thư đó sẽ bị xóa khỏi mọi nhãn đính kèm cũng như trong hộp thư đến.", "Gmail không cho phép người dùng tự tạo nhãn mới mà chỉ dùng các nhãn mặc định."], "a": 2, "lesson": "Bài 8: Thư điện tử & MXH", "note": "Trong Gmail, Nhãn (Label) khác với thư mục; khi xóa một thư, thư đó bị xóa khỏi mọi nhãn đính kèm cũng như trong hộp thư đến."}, {"id": 28, "q": "Trên mạng xã hội Facebook, để giúp các tổ chức, doanh nghiệp hoặc tập thể lớp quảng bá hình ảnh, thương hiệu, đăng tải các bài viết và sự kiện chung, người dùng sử dụng chức năng tạo trang nào sau đây (bằng cách vào Menu -> Tạo -> chọn Trang)?", "o": ["Tạo Fanpage (Trang).", "Tạo hộp thư Gmail.", "Tạo ổ đĩa trực tuyến Dropbox.", "Tạo bảng tính Google Sheets."], "a": 0, "lesson": "Bài 8: Thư điện tử & MXH", "note": "Để quảng bá hình ảnh tập thể lớp, tổ chức, doanh nghiệp trên Facebook: vào Menu → Tạo → chọn Trang để tạo Fanpage."}];
+const Q = [{"type":"mcq","q":"Trong phản ứng: N_{2}(g) + 3H_{2}(g) ⇌ 2NH_{3}(g). N_{2} thể hiện","o":["tính khử.","tính oxi hóa.","tính base.","tính acid."],"a":1,"lesson":"Đề kiểm tra tổng hợp","id":0},{"type":"mcq","q":"Khi có sấm chớp, khí quyển sinh ra khí","o":["CO.","NO.","SO_{2}.","CO_{2}."],"a":1,"lesson":"Đề kiểm tra tổng hợp","id":1},{"type":"mcq","q":"Liên kết hóa học trong phân tử NH_{3} là liên kết","o":["cộng hóa trị có cực.","ion.","cộng hóa trị không cực.","kim loại."],"a":0,"lesson":"Đề kiểm tra tổng hợp","id":2},{"type":"mcq","q":"Số oxi hóa của sulfur trong phân tử SO_{2} là","o":["+4.","−2.","+6.","0."],"a":0,"lesson":"Đề kiểm tra tổng hợp","id":3},{"type":"mcq","q":"Sulfur trong chất nào sau đây vừa có tính oxi hóa, vừa có tính khử?","o":["H_{2}S.","Na_{2}SO_{4}.","SO_{2}.","H_{2}SO_{4}."],"a":2,"lesson":"Đề kiểm tra tổng hợp","id":4},{"type":"mcq","q":"Nhóm kim loại nào sau đây không tác dụng với H_{2}SO_{4} loãng?","o":["Zn, Al.","Na, Mg.","Cu, Hg.","Mg, Fe."],"a":2,"lesson":"Đề kiểm tra tổng hợp","id":5},{"type":"mcq","q":"Tính chất nào sau đây không phải tính chất của dung dịch sulfuric acid đặc?","o":["Tính háo nước.","Tính oxi hóa.","Tính acid.","Tính khử."],"a":3,"lesson":"Đề kiểm tra tổng hợp","id":6},{"type":"mcq","q":"Mưa acid là hiện tượng nước mưa có pH như thế nào?","o":["> 5,6.","< 7.","> 7.","< 5,6."],"a":3,"lesson":"Đề kiểm tra tổng hợp","id":7},{"type":"mcq","q":"Phú dưỡng là hiện tượng dư thừa quá nhiều các nguyên tố dinh dưỡng nào trong các nguồn nước?","o":["N, C.","N, K.","N, P.","P, K."],"a":2,"lesson":"Đề kiểm tra tổng hợp","id":8},{"type":"mcq","q":"Quá trình tạo đạm nitrate từ nitrogen trong tự nhiên được mô tả theo sơ đồ sau:\nN_{2} →(1) NO →(2) NO_{2} →(3: +X, +H_{2}O) HNO_{3} → H^{+} + NO_{3}^{−}\nCông thức của X là","o":["Cl_{2}.","O_{2}.","H_{2}.","CO_{2}."],"a":1,"lesson":"Đề kiểm tra tổng hợp","note":"4NO_{2} + O_{2} + 2H_{2}O → 4HNO_{3}, vậy X là O_{2}.","id":9},{"type":"mcq","q":"Trong phản ứng tổng hợp ammonia: N_{2}(g) + 3H_{2}(g) ⇌ 2NH_{3}(g), Δ_{r}H°_{298} = −92 kJ\nĐể tăng hiệu suất phản ứng tổng hợp phải","o":["giảm nhiệt độ và áp suất.","tăng nhiệt độ và áp suất.","tăng nhiệt độ và giảm áp suất.","giảm nhiệt độ vừa phải và tăng áp suất."],"a":3,"lesson":"Đề kiểm tra tổng hợp","note":"Phản ứng tỏa nhiệt và làm giảm số mol khí: giảm nhiệt độ (vừa phải để giữ tốc độ phản ứng) và tăng áp suất làm cân bằng chuyển dịch theo chiều thuận.","id":10},{"type":"mcq","q":"Cho các phát biểu sau:\n(a) Sulfuric acid đặc có tính háo nước, gây bỏng nặng khi tiếp xúc với da tay.\n(b) Khi pha loãng sulfuric acid đặc cần cho từ từ nước vào acid, không làm ngược lại gây nguy hiểm.\n(c) Khi bị bỏng sulfuric acid đặc, điều đầu tiên cần làm là xả nhanh chỗ bỏng với nước lạnh.\n(d) Sulfuric acid loãng có tính oxi hóa mạnh, khi tác dụng với kim loại không sinh ra khí hydrogen.\n(e) Thuốc thử nhận biết sulfuric acid và muối sulfate là ion Ba^{2+} trong BaCl_{2}, Ba(OH)_{2}, Ba(NO_{3})_{2}.\nSố phát biểu đúng là","o":["1.","2.","3.","4."],"a":2,"lesson":"Đề kiểm tra tổng hợp","note":"(a) đúng; (b) sai: phải rót từ từ acid vào nước; (c) đúng; (d) sai: H_{2}SO_{4} loãng có tính acid, khi tác dụng với kim loại hoạt động tạo khí H_{2}, còn tính oxi hóa mạnh là của H_{2}SO_{4} đặc; (e) đúng. Vậy có 3 phát biểu đúng.","id":11},{"type":"mcq","q":"Oxide phổ biến của nitrogen trong không khí là","o":["NO, N_{2}O.","NO, NO_{2}.","N_{2}O_{3}, NO_{2}.","NO, N_{2}O_{4}."],"a":1,"lesson":"Nitrogen và hợp chất","id":12},{"type":"mcq","q":"Nitrogen dioxide là tên gọi của oxide nào sau đây?","o":["NO.","NO_{2}.","N_{2}O.","N_{2}O_{4}."],"a":1,"lesson":"Nitrogen và hợp chất","id":13},{"type":"mcq","q":"Nitrogen monoxide là tên gọi của oxide nào sau đây?","o":["NO.","NO_{2}.","N_{2}O.","N_{2}O_{4}."],"a":0,"lesson":"Nitrogen và hợp chất","id":14},{"type":"mcq","q":"Hiện tượng mưa acid","o":["là hiện tượng sẵn có trong tự nhiên.","xảy ra do sự bốc hơi của nước rồi ngưng tụ.","xảy ra khi nước mưa có pH < 7.","xảy ra khi nước mưa có pH < 5,6."],"a":3,"lesson":"Nitrogen và hợp chất","id":15},{"type":"mcq","q":"Mưa acid là hiện tượng nước mưa có pH thấp hơn 5,6 (giá trị pH của khí carbon dioxide bão hòa trong nước). Hai tác nhân chính gây mưa acid là","o":["Cl_{2}, HCl.","N_{2}, NH_{3}.","SO_{2}, NO_{x}.","S, H_{2}S."],"a":2,"lesson":"Nitrogen và hợp chất","src":"KNTT – SBT","id":16},{"type":"mcq","q":"Hiện tượng mưa acid là do không khí bị ô nhiễm bởi các khí nào sau đây?","o":["SO_{2}, NO, NO_{2}.","NO, CO, CO_{2}.","CH_{4}, HCl, CO.","Cl_{2}, CH_{4}, SO_{2}."],"a":0,"lesson":"Nitrogen và hợp chất","id":17},{"type":"mcq","q":"Số oxi hóa thấp nhất của nitrogen là","o":["−3.","0.","+1.","+4."],"a":0,"lesson":"Nitrogen và hợp chất","src":"KNTT – SBT","id":18},{"type":"mcq","q":"Trong phân tử HNO_{3}, nguyên tử N có số oxi hóa là","o":["+5.","+3.","+4.","−3."],"a":0,"lesson":"Nitrogen và hợp chất","id":19},{"type":"mcq","q":"Phân tử nào sau đây có liên kết cho – nhận?","o":["NH_{3}.","N_{2}.","HNO_{3}.","H_{2}."],"a":2,"lesson":"Nitrogen và hợp chất","src":"KNTT – SBT","id":20},{"type":"mcq","q":"Nitric acid dễ bị phân hủy bởi ánh sáng hoặc nhiệt độ tạo thành các sản phẩm là","o":["NO_{2}, H_{2}O.","NO_{2}, O_{2}, H_{2}O.","N_{2}, O_{2}, H_{2}O.","N_{2}, H_{2}O."],"a":1,"lesson":"Nitrogen và hợp chất","src":"KNTT – SBT","id":21},{"type":"mcq","q":"Acid nào sau đây thể hiện tính oxi hóa mạnh khi tác dụng với chất khử?","o":["HCl.","HNO_{3}.","HBr.","H_{3}PO_{4}."],"a":1,"lesson":"Nitrogen và hợp chất","src":"KNTT – SBT","id":22},{"type":"mcq","q":"Để điều chế được silver nitrate từ một mẫu silver (bạc) tinh khiết, cần hòa tan mẫu silver vào dung dịch nào sau đây?","o":["Cu(NO_{3})_{2}.","HNO_{3}.","NaNO_{3}.","KNO_{3}."],"a":1,"lesson":"Nitrogen và hợp chất","src":"KNTT – SBT","id":23},{"type":"mcq","q":"Trong công nghiệp, quá trình sản xuất Ca(NO_{3})_{2} dùng làm phân bón được thực hiện bằng phản ứng giữa dung dịch HNO_{3} với hợp chất phổ biến, giá rẻ nào sau đây?","o":["CaO.","Ca(OH)_{2}.","CaCO_{3}.","CaSO_{4}."],"a":2,"lesson":"Nitrogen và hợp chất","src":"KNTT – SBT","id":24},{"type":"mcq","q":"Kim loại nào sau đây không tác dụng với nitric acid?","o":["Zn.","Cu.","Ag.","Au."],"a":3,"lesson":"Nitrogen và hợp chất","src":"KNTT – SBT","id":25},{"type":"mcq","q":"Kim loại không tan trong dung dịch HNO_{3} đặc, nguội là","o":["Mg.","Al.","Zn.","Cu."],"a":1,"lesson":"Nitrogen và hợp chất","id":26},{"type":"mcq","q":"Kim loại bị thụ động bởi dung dịch","o":["H_{2}SO_{4} loãng.","HCl đặc, nguội.","HNO_{3} đặc, nguội.","H_{2}SO_{4} đặc, nóng."],"a":2,"lesson":"Nitrogen và hợp chất","id":27},{"type":"mcq","q":"Các kim loại đều tác dụng được với dung dịch HCl nhưng không tác dụng với dung dịch HNO_{3} đặc, nguội","o":["Al, Fe.","Ag, Fe.","Pb, Ag.","Cu, Pb, Ag."],"a":0,"lesson":"Nitrogen và hợp chất","id":28},{"type":"mcq","q":"Kim loại M phản ứng được với dung dịch HCl, dung dịch Cu(NO_{3})_{2}, dung dịch HNO_{3} đặc. Kim loại M là","o":["Ag.","Zn.","Fe.","Al."],"a":1,"lesson":"Nitrogen và hợp chất","id":29},{"type":"mcq","q":"Hợp chất nào của nitrogen không được tạo ra khi cho HNO_{3} tác dụng với kim loại?","o":["NO.","NH_{4}NO_{3}.","NO_{2}.","N_{2}O_{5}."],"a":3,"lesson":"Nitrogen và hợp chất","note":"HNO_{3} tác dụng với kim loại tạo muối nitrate và một trong các sản phẩm khử NO_{2}, NO, N_{2}O, N_{2}, NH_{4}NO_{3}; không tạo ra N_{2}O_{5}.","id":30},{"type":"mcq","q":"Dung dịch nào sau đây tác dụng được với kim loại Cu?","o":["HCl.","HNO_{3} loãng.","H_{2}SO_{4} loãng.","KOH."],"a":1,"lesson":"Nitrogen và hợp chất","id":31},{"type":"mcq","q":"Cho Fe tác dụng với dung dịch HNO_{3} đặc, nóng thu được khí X có màu nâu đỏ. Khí X là?","o":["N_{2}.","N_{2}O.","NO.","NO_{2}."],"a":3,"lesson":"Nitrogen và hợp chất","id":32},{"type":"mcq","q":"Cho Cu phản ứng với dung dịch HNO_{3} loãng, nóng thu được một chất khí không màu hóa nâu trong không khí, khí đó là","o":["NO.","N_{2}O.","N_{2}.","NH_{3}."],"a":0,"lesson":"Nitrogen và hợp chất","id":33},{"type":"mcq","q":"Cho iron (III) oxide tác dụng với nitric acid thì sản phẩm thu được là","o":["Fe(NO_{3})_{3}, NO và H_{2}O.","Fe(NO_{3})_{3}, NO_{2} và H_{2}O.","Fe(NO_{3})_{3}, N_{2} và H_{2}O.","Fe(NO_{3})_{3} và H_{2}O."],"a":3,"lesson":"Nitrogen và hợp chất","note":"Fe_{2}O_{3} + 6HNO_{3} → 2Fe(NO_{3})_{3} + 3H_{2}O: phản ứng trao đổi, không phải phản ứng oxi hóa – khử vì Fe đã ở mức oxi hóa cao nhất (+3).","id":34},{"type":"mcq","q":"Hiện tượng phú dưỡng là một biểu hiện của môi trường ao, hồ bị ô nhiễm do dư thừa các chất dinh dưỡng. Sự dư thừa dinh dưỡng chủ yếu do hàm lượng các ion nào sau đây vượt quá mức cho phép?","o":["Sodium, potassium.","Calcium, magnesium.","Nitrate, phosphate.","Chloride, sulfate."],"a":2,"lesson":"Nitrogen và hợp chất","src":"KNTT – SBT","id":35},{"type":"mcq","q":"Phú dưỡng là hiện tượng xảy ra do sự gia tăng hàm lượng của nguyên tố nào trong nước?","o":["Fe, Mn.","N, P.","Ca, Mg.","Cl, F."],"a":1,"lesson":"Nitrogen và hợp chất","id":36},{"type":"mcq","q":"Các oxide của nitrogen không được tạo thành trong trường hợp nào sau đây?","o":["Núi lửa phun trào.","Đốt cháy các nhiên liệu hóa thạch.","Mưa dông, sấm sét.","Xả thải nước thải công nghiệp chưa qua xử lý."],"a":3,"lesson":"Nitrogen và hợp chất","note":"Oxide của nitrogen (NO_{x}) được tạo ra khi có sấm sét (N_{2} + O_{2} → 2NO), khi núi lửa phun trào và khi đốt nhiên liệu hóa thạch. Xả thải nước thải công nghiệp không trực tiếp tạo ra oxide của nitrogen.","id":37},{"type":"mcq","q":"Sulfur tả phương và sulfur đơn tà là","o":["Hai hợp chất của sulfur.","Hai dạng thù hình của sulfur.","Hai đồng vị của sulfur.","Hai đồng phân của sulfur."],"a":1,"lesson":"Sulfur và hợp chất","id":38},{"type":"mcq","q":"Sulfur được dân gian sử dụng để pha chế vào thuốc trị các bệnh ngoài da. Tên gọi dân gian của sulfur là","o":["diêm sinh.","đá vôi.","phèn chua.","giấm ăn."],"a":0,"lesson":"Sulfur và hợp chất","src":"KNTT – SBT","id":39},{"type":"mcq","q":"Trong tự nhiên, đồng vị của sulfur chiếm thành phần nhiều nhất là","o":["^{32}S.","^{33}S.","^{34}S.","^{36}S."],"a":0,"lesson":"Sulfur và hợp chất","src":"KNTT – SBT","id":40},{"type":"mcq","q":"Ở điều kiện thường, sulfur tồn tại ở dạng tinh thể, được tạo nên từ các phân tử sulfur. Số nguyên tử trong mỗi phân tử sulfur là","o":["2.","4.","6.","8."],"a":3,"lesson":"Sulfur và hợp chất","src":"KNTT – SBT","note":"Ở điều kiện thường, sulfur tồn tại ở dạng phân tử S_{8} (vòng 8 nguyên tử).","id":41},{"type":"mcq","q":"Khi phản ứng với kim loại, lưu huỳnh thể hiện tính chất gì?","o":["tính oxi hóa.","vừa có tính oxi hóa, vừa có tính khử.","tính khử.","tính lưỡng tính."],"a":0,"lesson":"Sulfur và hợp chất","id":42},{"type":"mcq","q":"Quá trình đốt than sinh ra nhiều loại khí thải, trong đó có khí SO_{2}. Khí SO_{2} mùi xốc và có khả năng gây viêm đường hô hấp. Tên gọi của SO_{2} là","o":["sulfur trioxide.","sulfur dioxide.","sulfuric acid.","hydrogen sulfide."],"a":1,"lesson":"Sulfur và hợp chất","src":"KNTT – SBT","id":43},{"type":"mcq","q":"Trong số các chất khí: SO_{2}, CO_{2}, O_{2}, N_{2}, khí tan tốt trong nước ở điều kiện thường là","o":["SO_{2}.","CO_{2}.","O_{2}.","N_{2}."],"a":0,"lesson":"Sulfur và hợp chất","src":"KNTT – SBT","note":"SO_{2} tan tốt trong nước (khoảng 40 thể tích SO_{2} trong 1 thể tích nước ở điều kiện thường), tạo dung dịch H_{2}SO_{3}.","id":44},{"type":"mcq","q":"Số oxi hóa của sulfur trong SO_{2} và SO_{3} lần lượt là","o":["+2; +3.","+4; +6.","+6; +4.","+4; +4."],"a":1,"lesson":"Sulfur và hợp chất","id":45},{"type":"mcq","q":"Hợp chất nào sau đây sulfur có số oxi hóa +4?","o":["Na_{2}S.","Na_{2}SO_{3}.","Na_{2}SO_{4}.","SO_{3}."],"a":1,"lesson":"Sulfur và hợp chất","id":46},{"type":"mcq","q":"Sulfur dioxide đóng vai trò chất khử khi tác dụng với đơn chất nào sau đây?","o":["Fe.","O_{2}.","H_{2}.","Hg."],"a":1,"lesson":"Sulfur và hợp chất","src":"KNTT – SBT","id":47},{"type":"mcq","q":"Ở điều kiện thích hợp, sulfur dioxide đóng vai trò là chất oxi hóa khi tham gia phản ứng với chất nào sau đây?","o":["NO_{2}.","H_{2}S.","NaOH.","Ca(OH)_{2}."],"a":1,"lesson":"Sulfur và hợp chất","id":48},{"type":"mcq","q":"Khí X làm đục nước vôi trong và được dùng làm chất tẩy trắng bột gỗ trong công nghiệp giấy. Chất X là","o":["NH_{3}.","CO_{2}.","SO_{2}.","H_{2}SO_{4}."],"a":2,"lesson":"Sulfur và hợp chất","id":49},{"type":"mcq","q":"Chất khí (X) tan trong nước tạo ra dung dịch làm quỳ tím hóa đỏ và khí (X) có thể được dùng làm chất tẩy màu. Khí (X) là","o":["NH_{3}.","CO_{2}.","SO_{2}.","O_{3}."],"a":2,"lesson":"Sulfur và hợp chất","id":50},{"type":"mcq","q":"Chất được dùng để tẩy trắng giấy và bột giấy trong công nghiệp là","o":["N_{2}O.","CO_{2}.","SO_{2}.","NO_{2}."],"a":2,"lesson":"Sulfur và hợp chất","id":51},{"type":"mcq","q":"Sulfur dioxide có tính chất hóa học gì?","o":["có tính khử mạnh.","có tính oxi hóa mạnh.","vừa có tính khử vừa có tính oxi hóa.","không có cả tính oxi hóa lẫn tính khử."],"a":2,"lesson":"Sulfur và hợp chất","id":52},{"type":"mcq","q":"Sulfur dioxide tan trong nước thì thu được dung dịch nào?","o":["HNO_{3} đặc, nguội.","H_{2}SO_{4}.","H_{2}SO_{3}.","Na_{2}SO_{4}."],"a":2,"lesson":"Sulfur và hợp chất","id":53},{"type":"mcq","q":"SO_{2} là một khí độc được thải ra từ các vùng công nghiệp, là một trong những nguyên nhân chính gây ra hiện tượng nào dưới đây?","o":["Mưa acid.","Hiệu ứng nhà kính.","Sương mù.","Thủng tầng ozone."],"a":0,"lesson":"Sulfur và hợp chất","id":54},{"type":"mcq","q":"Khí nào sau đây có khả năng làm mất màu nước bromine?","o":["N_{2}.","CO_{2}.","H_{2}.","SO_{2}."],"a":3,"lesson":"Sulfur và hợp chất","note":"SO_{2} làm mất màu nước bromine: SO_{2} + Br_{2} + 2H_{2}O → 2HBr + H_{2}SO_{4}.","id":55},{"type":"mcq","q":"Để phân biệt CO_{2} và SO_{2} chỉ cần dùng thuốc thử là","o":["nước bromine.","quỳ tím.","dung dịch NaOH.","dung dịch Ba(OH)_{2}."],"a":0,"lesson":"Sulfur và hợp chất","note":"Chỉ SO_{2} làm mất màu nước bromine, CO_{2} thì không.","id":56},{"type":"mcq","q":"Thạch cao sống là một dạng tồn tại phổ biến của sulfur trong tự nhiên, được sử dụng làm nguyên liệu để sản xuất xi măng, phấn viết bảng,… Công thức của thạch cao sống là","o":["BaSO_{4}.","CaSO_{4}·2H_{2}O.","MgSO_{4}.","CuSO_{4}·5H_{2}O."],"a":1,"lesson":"Sulfur và hợp chất","id":57},{"type":"mcq","q":"Tính chất nào sau đây không phải tính chất vật lý của sulfur?","o":["Màu vàng ở điều kiện thường.","Thể rắn ở điều kiện thường.","Không tan trong benzene.","Không tan trong nước."],"a":2,"lesson":"Sulfur và hợp chất","note":"Sulfur không tan trong nước nhưng tan trong một số dung môi hữu cơ như benzene, carbon disulfide (CS_{2}).","id":58},{"type":"mcq","q":"Trong công nghiệp, phần lớn sulfur đơn chất sau khi khai thác ở các mỏ được dùng làm nguyên liệu để","o":["lưu hóa cao su tự nhiên.","sản xuất sulfuric acid.","điều chế thuốc bảo vệ thực vật.","bào chế thuốc đông y."],"a":1,"lesson":"Sulfur và hợp chất","id":59},{"type":"mcq","q":"Phương trình nào sau đây biểu diễn đúng quá trình biến đổi từ S (0) → S (+4)?","o":["Al + S → Al_{2}S_{3}.","Hg + S → HgS.","H_{2} + S → H_{2}S.","O_{2} + S → SO_{2}."],"a":3,"lesson":"Sulfur và hợp chất","note":"S + O_{2} → SO_{2}: số oxi hóa của S tăng từ 0 lên +4. Ở các đáp án còn lại, S giảm từ 0 xuống −2.","id":60},{"type":"mcq","q":"Phương trình nào sau đây biểu diễn đúng quá trình biến đổi từ S (0) → S (+6)?","o":["O_{2} + S → SO_{2}.","Hg + S → HgS.","H_{2} + S → H_{2}S.","S + 3F_{2} → SF_{6}."],"a":3,"lesson":"Sulfur và hợp chất","note":"S + 3F_{2} → SF_{6}: số oxi hóa của S tăng từ 0 lên +6.","id":61},{"type":"mcq","q":"Phản ứng nào sau đây sulfur đóng vai trò là chất oxi hóa?","o":["S + O_{2} → SO_{2}.","S + 2Na → Na_{2}S.","S + 6HNO_{3}(đặc) → H_{2}SO_{4} + 6NO_{2} + 2H_{2}O.","S + 3F_{2} → SF_{6}."],"a":1,"lesson":"Sulfur và hợp chất","id":62},{"type":"mcq","q":"Chất nào sau đây không bay hơi ở điều kiện thường do nhiệt độ sôi rất cao (337 °C)?","o":["H_{2}O.","HNO_{3}.","NH_{3}.","H_{2}SO_{4}."],"a":3,"lesson":"Sulfuric acid và muối sulfate","id":63},{"type":"mcq","q":"Quá trình pha loãng dung dịch đậm đặc của acid nào sau đây tỏa rất nhiều nhiệt nên không được tự ý pha loãng?","o":["HCl.","H_{2}SO_{4}.","CH_{3}COOH.","HNO_{3}."],"a":1,"lesson":"Sulfuric acid và muối sulfate","id":64},{"type":"mcq","q":"Ở thể lỏng, chất nào sau đây có dạng sánh như dầu do tồn tại liên kết hydrogen rất mạnh giữa các phân tử?","o":["HF.","H_{2}SO_{4}.","H_{2}O.","CH_{3}COOH."],"a":1,"lesson":"Sulfuric acid và muối sulfate","id":65},{"type":"mcq","q":"Cách pha loãng dung dịch H_{2}SO_{4} đặc nào sau đây đúng?","o":["Rót nhanh acid vào nước và khuấy đều.","Rót nhanh nước vào acid và khuấy đều.","Rót từ từ nước vào acid và khuấy đều.","Rót từ từ acid vào nước và khuấy đều."],"a":3,"lesson":"Sulfuric acid và muối sulfate","id":66},{"type":"mcq","q":"Bước sơ cứu đầu tiên cần làm ngay khi một người bị bỏng sulfuric acid là","o":["Rửa với nước lạnh nhiều lần.","Trung hòa acid bằng NaHCO_{3}.","Băng bó tạm thời vết bỏng.","Đưa đến cơ sở y tế gần nhất."],"a":0,"lesson":"Sulfuric acid và muối sulfate","id":67},{"type":"mcq","q":"Trong công nghiệp sản xuất sulfuric acid, sulfur trioxide được hấp thụ vào dung dịch sulfuric acid đặc tạo thành những chất có công thức chung là","o":["H_{2}S_{2}O_{7}.","H_{2}SO_{4}.","H_{2}SO_{4}·nSO_{3}.","(SO_{3})_{n}."],"a":2,"lesson":"Sulfuric acid và muối sulfate","id":68},{"type":"mcq","q":"Acid H_{2}SO_{4} loãng tác dụng với Fe tạo thành sản phẩm:","o":["Fe_{2}(SO_{4})_{3} và H_{2}.","FeSO_{4} và H_{2}.","FeSO_{4} và SO_{2}.","Fe_{2}(SO_{4})_{3} và SO_{2}."],"a":1,"lesson":"Sulfuric acid và muối sulfate","id":69},{"type":"mcq","q":"Dung dịch H_{2}SO_{4} loãng phản ứng được với tất cả các kim loại thuộc dãy nào sau đây?","o":["Cu, Na.","Ag, Zn.","Mg, Al.","Au, Pt."],"a":2,"lesson":"Sulfuric acid và muối sulfate","id":70},{"type":"mcq","q":"Trong các chất sau, chất nào phản ứng được với dung dịch H_{2}SO_{4} loãng?","o":["CuS.","FeS.","Cu.","Ag."],"a":1,"lesson":"Sulfuric acid và muối sulfate","id":71},{"type":"mcq","q":"Kim loại nào sau đây không tác dụng với dung dịch H_{2}SO_{4} loãng?","o":["Al.","Zn.","Na.","Cu."],"a":3,"lesson":"Sulfuric acid và muối sulfate","id":72},{"type":"mcq","q":"Người ta đun nóng Cu với dung dịch H_{2}SO_{4} đặc, nóng. Khí sinh ra có tên gọi là","o":["Khí oxygen.","Khí hydrogen.","Khí carbonic.","Khí sulfur dioxide."],"a":3,"lesson":"Sulfuric acid và muối sulfate","id":73},{"type":"mcq","q":"Các khí sinh ra trong thí nghiệm phản ứng của saccharose (C_{12}H_{22}O_{11}) với dung dịch H_{2}SO_{4} đặc bao gồm:","o":["H_{2}S và CO_{2}.","H_{2}S và SO_{2}.","SO_{3} và CO_{2}.","SO_{2} và CO_{2}."],"a":3,"lesson":"Sulfuric acid và muối sulfate","id":74},{"type":"mcq","q":"H_{2}SO_{4} đặc nóng không tác dụng với chất nào sau đây?","o":["Fe.","NaCl rắn.","Ag.","Au."],"a":3,"lesson":"Sulfuric acid và muối sulfate","id":75},{"type":"mcq","q":"Dãy chất nào sau đây phản ứng được với dung dịch sulfuric acid đặc nguội?","o":["Au, Cu.","Mg, Fe.","Zn, NaOH.","Al, S."],"a":2,"lesson":"Sulfuric acid và muối sulfate","id":76},{"type":"mcq","q":"Sulfuric acid đặc, nguội có thể đựng trong bình chứa làm bằng","o":["Cu.","Ag.","Ca.","Al."],"a":3,"lesson":"Sulfuric acid và muối sulfate","id":77},{"type":"mcq","q":"Hai chất nào sau đây khi trộn với nhau có thể xảy ra phản ứng hóa học?","o":["S + H_{2}SO_{4} đặc.","CO_{2} + BaCl_{2}.","FeCl_{2} + H_{2}S.","HNO_{3} + Na_{2}SO_{4}."],"a":0,"lesson":"Sulfuric acid và muối sulfate","id":78},{"type":"mcq","q":"Dung dịch sulfuric acid đặc khác dung dịch sulfuric acid loãng ở tính chất hóa học nào?","o":["Tính base mạnh.","Tính oxi hóa mạnh.","Tính acid mạnh.","Tính khử mạnh."],"a":1,"lesson":"Sulfuric acid và muối sulfate","id":79},{"type":"mcq","q":"Trong công nghiệp, hydrogen fluoride được điều chế từ quặng fluorite theo phản ứng: CaF_{2} + H_{2}SO_{4} (đặc, 250°C) → CaSO_{4} + 2HF. Vai trò của sulfuric acid trong phản ứng là","o":["base.","chất oxi hóa.","acid.","chất khử."],"a":2,"lesson":"Sulfuric acid và muối sulfate","id":80},{"type":"mcq","q":"Sulfuric acid đặc thể hiện tính chất nào khi lấy nước từ hợp chất carbohydrate và khiến chúng hóa đen?","o":["Tính acid.","Tính base.","Tính háo nước.","Tính dễ tan."],"a":2,"lesson":"Sulfuric acid và muối sulfate","id":81},{"type":"mcq","q":"Để nhận biết anion có trong dung dịch K_{2}SO_{4}, không thể dùng thuốc thử nào sau đây?","o":["Ba(OH)_{2}.","BaCl_{2}.","Ba(NO_{3})_{2}.","MgCl_{2}."],"a":3,"lesson":"Sulfuric acid và muối sulfate","id":82},{"type":"mcq","q":"Phân biệt được dung dịch Na_{2}SO_{4} và NaCl bằng dung dịch nào sau đây?","o":["MgCl_{2}.","FeCl_{2}.","HCl.","BaCl_{2}."],"a":3,"lesson":"Sulfuric acid và muối sulfate","id":83},{"type":"mcq","q":"Muối X không tan trong nước và các dung môi hữu cơ. Trong y học, X thường được dùng làm chất cản quang xét nghiệm X-quang đường tiêu hóa. Công thức của X là","o":["BaSO_{4}.","Na_{2}SO_{4}.","K_{2}SO_{4}.","MgSO_{4}."],"a":0,"lesson":"Sulfuric acid và muối sulfate","id":84},{"type":"mcq","q":"Dãy kim loại nào trong các dãy sau đây gồm các kim loại không tác dụng với dung dịch H_{2}SO_{4} đặc, nguội?","o":["Al, Fe, Au, Pt.","Zn, Pt, Au, Mg.","Al, Fe, Zn, Mg.","Al, Fe, Au, Mg."],"a":0,"lesson":"Sulfuric acid và muối sulfate","id":85},{"type":"mcq","q":"Dãy chất nào sau đây bị thụ động trong H_{2}SO_{4} đặc, nguội?","o":["Mg, Cu, Ag.","Ca, Ag, Mg.","Cu, Zn, Mg.","Al, Fe, Cr."],"a":3,"lesson":"Sulfuric acid và muối sulfate","id":86},{"type":"mcq","q":"Người ta thường dùng các bình bằng thép để đựng và vận chuyển chở dung dịch H_{2}SO_{4} đặc vì","o":["thép bị thụ động hóa trong dung dịch H_{2}SO_{4} đặc, nguội.","dung dịch H_{2}SO_{4} đặc không phản ứng với sắt ở nhiệt độ thường.","dung dịch H_{2}SO_{4} đặc không phản ứng với kim loại ở nhiệt độ thường.","thép có chứa các chất phụ trợ không phản ứng với dung dịch H_{2}SO_{4} đặc."],"a":0,"lesson":"Sulfuric acid và muối sulfate","id":87},{"type":"mcq","q":"Dung dịch sulfuric acid loãng tác dụng được với 2 chất trong dãy nào sau đây?","o":["S và H_{2}S.","Fe và Fe(OH)_{3}.","Cu và Cu(OH)_{2}.","C và CO_{2}."],"a":1,"lesson":"Sulfuric acid và muối sulfate","id":88},{"type":"mcq","q":"Trường hợp nào sau đây có phản ứng?","o":["H_{2}SO_{4} loãng + Cu.","H_{2}SO_{4} loãng + S.","H_{2}SO_{4} đặc, nguội + Al.","H_{2}SO_{4} đặc + Na_{2}CO_{3}."],"a":3,"lesson":"Sulfuric acid và muối sulfate","id":89},{"type":"mcq","q":"Nhóm gồm tất cả các kim loại tan trong dung dịch H_{2}SO_{4} đặc nóng nhưng không tan trong dung dịch H_{2}SO_{4} loãng là:","o":["Hg, Ag, Cu.","Al, Fe, Cr.","Ag, Fe, Pt.","Al, Cu, Au."],"a":0,"lesson":"Sulfuric acid và muối sulfate","id":90},{"type":"mcq","q":"Cho FeCO_{3} tác dụng với H_{2}SO_{4} đặc nóng dư. Sản phẩm khí thu được là","o":["CO_{2}.","H_{2} và CO_{2}.","SO_{2} và CO_{2}.","SO_{2}."],"a":2,"lesson":"Sulfuric acid và muối sulfate","id":91},{"type":"mcq","q":"Cho phản ứng: S + 2H_{2}SO_{4} (đặc) → 3SO_{2} + 2H_{2}O. Tỉ lệ giữa số nguyên tử sulfur bị khử và số nguyên tử sulfur bị oxi hóa là","o":["1 : 2.","1 : 3.","3 : 1.","2 : 1."],"a":3,"lesson":"Sulfuric acid và muối sulfate","note":"S (0) → S (+4): 1 nguyên tử S bị oxi hóa. S (+6) → S (+4): 2 nguyên tử S bị khử. Tỉ lệ bị khử : bị oxi hóa = 2 : 1.","id":92},{"type":"mcq","q":"Phản ứng nào sau đây không xảy ra?","o":["2Al + 3H_{2}SO_{4} → Al_{2}(SO_{4})_{3} + 3H_{2}.","2Na + H_{2}SO_{4} → Na_{2}SO_{4} + H_{2}.","Cu + H_{2}SO_{4} → CuSO_{4} + H_{2}.","Zn + H_{2}SO_{4} → ZnSO_{4} + H_{2}."],"a":2,"lesson":"Sulfuric acid và muối sulfate","id":93},{"type":"mcq","q":"Phản ứng nào sau đây không đúng?","o":["2Al + 3H_{2}SO_{4} → Al_{2}(SO_{4})_{3} + 3H_{2}.","2Fe + 3H_{2}SO_{4} → Fe_{2}(SO_{4})_{3} + 3H_{2}.","Fe + H_{2}SO_{4} → FeSO_{4} + H_{2}.","Pb + H_{2}SO_{4} → PbSO_{4} + H_{2}."],"a":1,"lesson":"Sulfuric acid và muối sulfate","note":"Fe tác dụng với H_{2}SO_{4} loãng chỉ tạo muối sắt(II): Fe + H_{2}SO_{4} → FeSO_{4} + H_{2}.","id":94},{"type":"mcq","q":"Phản ứng nào dưới đây không đúng?","o":["H_{2}SO_{4} đặc + FeO → FeSO_{4} + H_{2}O.","H_{2}SO_{4} đặc + 2HI → I_{2} + SO_{2} + 2H_{2}O.","2H_{2}SO_{4} đặc + C → CO_{2} + 2SO_{2} + 2H_{2}O.","6H_{2}SO_{4} đặc + 2Fe → Fe_{2}(SO_{4})_{3} + 3SO_{2} + 6H_{2}O."],"a":0,"lesson":"Sulfuric acid và muối sulfate","note":"H_{2}SO_{4} đặc oxi hóa FeO lên Fe(III): 2FeO + 4H_{2}SO_{4} → Fe_{2}(SO_{4})_{3} + SO_{2} + 4H_{2}O.","id":95},{"type":"tf","lesson":"Đề kiểm tra tổng hợp","q":"Cho hai phản ứng hóa học:\n(1) N_{2}(g) + 3H_{2}(g) ⇌ 2NH_{3}(g), Δ_{r}H°_{298} = −92 kJ\n(2) N_{2}(g) + O_{2}(g) ⇌ 2NO(g), Δ_{r}H°_{298} = 180 kJ","s":[{"t":"Phản ứng (1) và phản ứng (2) đều tỏa nhiệt theo chiều thuận.","v":false,"n":"Sai. Phản ứng (1) tỏa nhiệt (ΔH < 0), phản ứng (2) thu nhiệt (ΔH > 0)."},{"t":"Trong phản ứng (1) N_{2} thể hiện tính oxi hóa, trong phản ứng (2) N_{2} thể hiện tính khử.","v":true,"n":"Đúng. (1) N(0) → N(−3): N_{2} là chất oxi hóa; (2) N(0) → N(+2): N_{2} là chất khử."},{"t":"Phản ứng (1) là quá trình trung gian để sản xuất nitric acid, đạm nitrate,…","v":false,"n":"Sai. Phản ứng (1) tạo ra NH_{3} (ammonia), là nguyên liệu sản xuất đạm nitrate, nitric acid chứ không phải là quá trình trung gian trực tiếp."},{"t":"Phản ứng (2) xảy ra trong những cơn mưa dông kèm theo sấm sét.","v":true,"n":"Đúng. Nitrogen tác dụng với oxygen ở nhiệt độ khoảng 3000 °C hoặc khi có tia lửa điện."}],"id":96},{"type":"tf","lesson":"Đề kiểm tra tổng hợp","q":"Sơ đồ quy trình dưới đây mô tả các bước trong quá trình sản xuất phân bón (Z):\nSO_{2} + O_{2} →(1) A(g) →(2) +H_{2}SO_{4} hợp chất Q →(3) +H_{2}O hợp chất X\nN_{2} + H_{2} →(4) hợp chất Y\nX + Y →(5) phân bón Z","s":[{"t":"Q có tên gọi là oleum.","v":true,"n":"Đúng. Q là H_{2}SO_{4}·nSO_{3} (oleum)."},{"t":"X có công thức là H_{2}SO_{4}.","v":true,"n":"Đúng. Oleum + H_{2}O → H_{2}SO_{4}."},{"t":"Y có khả năng nhận proton khi phản ứng với nước.","v":true,"n":"Đúng. Y là NH_{3}, có tính base, nhận H^{+} từ H_{2}O: NH_{3} + H_{2}O ⇌ NH_{4}^{+} + OH^{−}."},{"t":"Phần trăm khối lượng của nguyên tố N trong Z là 12,12%.","v":false,"n":"Sai. Z là (NH_{4})_{2}SO_{4}, %N = 28/132 × 100% ≈ 21,21%."}],"id":97},{"type":"tf","lesson":"Nitrogen và hợp chất","q":"Xét tính đúng/sai của các phát biểu về HNO_{3}:","s":[{"t":"Dung dịch nitric acid làm quỳ tím chuyển màu đỏ.","v":true,"n":"Đúng. HNO_{3} là acid mạnh."},{"t":"Tất cả các basic oxide và oxide khi tác dụng với HNO_{3} đặc đều thu được muối nitrate và nước.","v":false,"n":"Sai. Với oxide có tính khử (như FeO, Fe_{3}O_{4}), HNO_{3} đặc tạo muối sắt(III), sản phẩm khử (NO_{2}) và H_{2}O."},{"t":"Một số muối có thể tác dụng với HNO_{3} tạo muối nitrate và acid yếu hơn.","v":true,"n":"Đúng. Ví dụ: CaCO_{3} + 2HNO_{3} → Ca(NO_{3})_{2} + CO_{2} + H_{2}O."},{"t":"Nitric acid khi tác dụng với muối có thể tạo ra muối nitrate như NH_{4}NO_{3}, Ca(NO_{3})_{2} là phân đạm cung cấp nguyên tố nitrogen cho cây trồng.","v":true,"n":"Đúng. Các muối nitrate như NH_{4}NO_{3}, Ca(NO_{3})_{2} là phân đạm."}],"id":98},{"type":"tf","lesson":"Nitrogen và hợp chất","q":"Phú dưỡng là hiện tượng dư thừa quá nhiều các nguyên tố dinh dưỡng (N, P) trong các nguồn nước làm cho các sinh vật phát triển trong nước như vi khuẩn, tảo, rong, rêu,… phát triển nhanh.","s":[{"t":"Nguyên nhân gây ra hiện tượng phú dưỡng do nguồn nước thải nông nghiệp, công nghiệp, sinh hoạt chưa xử lý triệt để thải vào ao hồ.","v":true,"n":"Đúng."},{"t":"Hiện tượng phú dưỡng làm giảm sự quang hợp của thực vật thủy sinh và làm tăng nguồn oxygen của tôm, cá,… gây mất cân bằng hệ sinh thái.","v":false,"n":"Sai. Phú dưỡng làm suy giảm lượng oxygen hòa tan trong nước, gây chết tôm, cá."},{"t":"Các loại tôm, cá,… ở ao hồ có hiện tượng phú dưỡng thường khỏe mạnh và béo tốt vì có nguồn chất dinh dưỡng phong phú.","v":false,"n":"Sai. Tôm, cá bị thiếu oxygen và nhiễm độc nên chết ngạt."},{"t":"Để khắc phục hiện tượng phú dưỡng ta cần xử lý nước thải trước khi thải vào môi trường, sử dụng phân bón đúng liều lượng, khơi thông kênh rạch, ao hồ, lưu thông dòng nước.","v":true,"n":"Đúng."}],"id":99},{"type":"tf","lesson":"Sulfur và hợp chất","q":"Trắc nghiệm đúng – sai về sulfur:","s":[{"t":"Cấu hình electron của nguyên tử sulfur là 1s^{2} 2s^{2} 2p^{6} 3s^{2} 3p^{4}.","v":true,"n":"Đúng. Sulfur có Z = 16."},{"t":"Trong bảng tuần hoàn, sulfur thuộc ô số 16, chu kì 4, nhóm VIA.","v":false,"n":"Sai. Sulfur thuộc chu kì 3 (có 3 lớp electron)."},{"t":"Phân tử sulfur gồm 6 nguyên tử liên kết với nhau tạo thành vòng khép kín.","v":false,"n":"Sai. Phân tử sulfur gồm 8 nguyên tử (S_{8})."},{"t":"Liên kết giữa các nguyên tử trong phân tử sulfur thuộc loại liên kết cộng hóa trị không phân cực.","v":true,"n":"Đúng. Các nguyên tử cùng là nguyên tố S."}],"id":100},{"type":"tf","lesson":"Sulfuric acid và muối sulfate","q":"H_{2}SO_{4} đặc gây nguy hiểm khi tiếp xúc với da nên cần lưu ý khi sử dụng và bảo quản:","s":[{"t":"Cần bảo quản H_{2}SO_{4} trong chai lọ đậy chặt, đặt ở vị trí chắc chắn.","v":true,"n":"Đúng."},{"t":"Khi làm thí nghiệm với H_{2}SO_{4} đặc cần dùng găng tay, không cần đeo kính bảo hộ và áo thí nghiệm.","v":false,"n":"Sai. Cần đeo đầy đủ kính bảo hộ, găng tay và áo blouse phòng thí nghiệm."},{"t":"Khi bị bỏng H_{2}SO_{4} đặc thì việc đầu tiên cần làm là nhanh chóng rửa ngay với nước lạnh nhiều lần.","v":true,"n":"Đúng. Rửa xả dưới dòng nước chảy liên tục."},{"t":"H_{2}SO_{4} đặc không quá nguy hiểm nên khi bị bỏng không cần thiết phải đến cơ sở y tế.","v":false,"n":"Sai. Bỏng H_{2}SO_{4} ăn sâu vào da rất nguy hiểm, cần đến cơ sở y tế."}],"id":101},{"type":"tf","lesson":"Sulfuric acid và muối sulfate","q":"Xét tính chất hóa học của H_{2}SO_{4} loãng:","s":[{"t":"Dung dịch H_{2}SO_{4} loãng đổi màu quỳ tím thành đỏ.","v":true,"n":"Đúng."},{"t":"Cho Fe vào dung dịch H_{2}SO_{4} loãng tạo thành muối Fe_{2}(SO_{4})_{3} và H_{2}.","v":false,"n":"Sai. H_{2}SO_{4} loãng chỉ tạo FeSO_{4} (muối sắt(II)) và H_{2}."},{"t":"Cu không tan trong dung dịch H_{2}SO_{4} loãng nhưng CuO thì tan tạo thành dung dịch có màu xanh lam.","v":true,"n":"Đúng. CuO + H_{2}SO_{4} → CuSO_{4} (xanh lam) + H_{2}O."},{"t":"Nhỏ dung dịch BaCl_{2} vào dung dịch H_{2}SO_{4} thấy xuất hiện kết tủa trắng và có khí thoát ra.","v":false,"n":"Sai. Chỉ tạo kết tủa BaSO_{4} màu trắng, không có khí thoát ra."}],"id":102},{"type":"tf","lesson":"Sulfuric acid và muối sulfate","q":"Xét tính chất hóa học của H_{2}SO_{4} đặc:","s":[{"t":"H_{2}SO_{4} ngoài có tính chất của acid mạnh còn có tính oxi hóa mạnh.","v":true,"n":"Đúng."},{"t":"Tất cả các kim loại đều có thể tan được trong dung dịch H_{2}SO_{4} đặc nóng.","v":false,"n":"Sai. Au và Pt không tan trong H_{2}SO_{4} đặc, nóng."},{"t":"Al, Fe, Cr không tan trong dung dịch H_{2}SO_{4} đặc, nguội do bị thụ động hóa.","v":true,"n":"Đúng."},{"t":"Khi cho H_{2}SO_{4} đặc vào cốc saccharose thì thấy chất rắn chuyển dần sang màu đen và trào lên khỏi miệng cốc.","v":true,"n":"Đúng. Do tính háo nước, đồng thời H_{2}SO_{4} oxi hóa C tạo CO_{2} và SO_{2}."}],"id":103},{"type":"tf","lesson":"Sulfuric acid và muối sulfate","q":"H_{2}SO_{4} có nhiều ứng dụng trong đời sống và sản xuất:","s":[{"t":"Dùng để sản xuất ắc quy.","v":true,"n":"Đúng."},{"t":"Dùng để sản xuất xà phòng.","v":true,"n":"Đúng."},{"t":"Dùng để sản xuất phân bón.","v":true,"n":"Đúng."},{"t":"Dùng để sản xuất sơn.","v":true,"n":"Đúng."}],"id":104},{"type":"short","lesson":"Đề kiểm tra tổng hợp","q":"Phân tử NH_{3} có bao nhiêu liên kết sigma?","kind":"num","ans":"3","note":"Phân tử NH_{3} có 3 liên kết đơn N–H, mỗi liên kết đơn là 1 liên kết sigma (σ).","tol":0,"id":105},{"type":"short","lesson":"Đề kiểm tra tổng hợp","q":"Cho phản ứng: aFe + bHNO_{3} → cFe(NO_{3})_{3} + dNO↑ + eH_{2}O. Hệ số tỉ lượng a, b, c, d, e là những số nguyên dương có tỉ lệ tối giản. Tổng (a + b) bằng bao nhiêu?","kind":"num","ans":"5","note":"Phản ứng cân bằng: Fe + 4HNO_{3} → Fe(NO_{3})_{3} + NO + 2H_{2}O. Ta có a = 1, b = 4 ⇒ a + b = 5.","tol":0,"id":106},{"type":"short","lesson":"Đề kiểm tra tổng hợp","q":"Cho SO_{2} tác dụng với các chất: (1) H_{2}O, (2) CaO, (3) H_{2}S, (4) Mg, (5) NaOH, (6) O_{2}, (7) NO_{2}. Hãy sắp xếp các phản ứng chứng tỏ SO_{2} là một acidic oxide thành bộ số theo thứ tự tăng dần.","kind":"digits","ans":"125","note":"SO_{2} thể hiện tính chất của acidic oxide khi tác dụng với nước (1), basic oxide CaO (2) và dung dịch base NaOH (5). Các phản ứng (3), (4), (6), (7) là phản ứng oxi hóa – khử.","id":107},{"type":"short","lesson":"Đề kiểm tra tổng hợp","q":"Oleum Z (H_{2}SO_{4}·nSO_{3}) được tạo thành khi cho 100 kg dung dịch H_{2}SO_{4} 98% hấp thụ hoàn toàn 30 kg SO_{3}. Phần trăm khối lượng SO_{3} trong Z là b%. Giá trị của b là bao nhiêu? (Làm tròn đến hàng phần trăm)","kind":"num","ans":"16.24","note":"m(H_{2}O trong dung dịch 98%) = 2 kg. 2 kg H_{2}O tác dụng với 2 × 80/18 ≈ 8,89 kg SO_{3} để thành H_{2}SO_{4}. Khối lượng SO_{3} còn dư = 30 − 8,89 = 21,11 kg. Khối lượng oleum Z = 100 + 30 = 130 kg. Vậy b% = 21,11/130 × 100% ≈ 16,24%.","unit":"%","tol":0.01,"id":108},{"type":"short","lesson":"Đề kiểm tra tổng hợp","q":"Sulfuric acid có thể được điều chế từ quặng pyrite theo sơ đồ:\nFeS_{2} →(1) SO_{2} →(2) SO_{3} →(3) H_{2}SO_{4}\nTrong đó: (1) +O_{2}, t°; (2) +O_{2}, t°; (3) +H_{2}O. Biết hiệu suất của cả quá trình là 90%, các tạp chất trong quặng không chứa sulfur. Thể tích dung dịch H_{2}SO_{4} 95% (D = 1,82 g/mL) thu được từ 1 tấn quặng pyrite (chứa 80% FeS_{2}) là bao nhiêu lít? (Làm tròn đến hàng đơn vị)","kind":"num","ans":"680","note":"m(FeS_{2}) = 1 tấn × 80% = 800 000 g. Sơ đồ bảo toàn S: FeS_{2} → 2H_{2}SO_{4} (120 g → 196 g). Theo lí thuyết: m(H_{2}SO_{4}) = 800 000 × 196/120 ≈ 1 306 666,67 g. Với H = 90%: m(H_{2}SO_{4} thực tế) = 1 176 000 g. Khối lượng dung dịch 95%: 1 176 000 × 100/95 ≈ 1 237 894,74 g. Thể tích: V = 1 237 894,74/1,82 ≈ 680 162 mL ≈ 680 lít.","unit":"lít","tol":0.5,"id":109},{"type":"short","lesson":"Nitrogen và hợp chất","q":"Xét phản ứng: N_{2}(g) + O_{2}(g) ⇌ 2NO(g), Δ_{r}H°_{298} = 180,6 kJ. Nhiệt tạo thành chuẩn của NO(g) là bao nhiêu kJ/mol?","kind":"num","ans":"90.3","note":"Δ_{f}H°_{298}(NO) = Δ_{r}H°_{298}/2 = 180,6/2 = 90,3 kJ/mol.","unit":"kJ/mol","tol":0.01,"id":110},{"type":"short","lesson":"Nitrogen và hợp chất","q":"Cho dung dịch HNO_{3} tác dụng với các chất sau: NH_{3}, CaCO_{3}, Ag, NaOH. Có bao nhiêu phản ứng trong đó HNO_{3} đóng vai trò acid theo Bronsted?","kind":"num","ans":"3","note":"NH_{3} (nhận H^{+}), CaCO_{3} (trao đổi H^{+}), NaOH (trung hòa H^{+}) — HNO_{3} đóng vai trò acid. Với Ag, HNO_{3} đóng vai trò chất oxi hóa. Tổng cộng 3 phản ứng.","tol":0,"src":"KNTT – SBT","id":111},{"type":"short","lesson":"Nitrogen và hợp chất","q":"Cho các chất: Cu, Al, MgO, Fe_{3}O_{4}, Fe(OH)_{2}, CaCO_{3}, K_{2}SO_{4} lần lượt tác dụng với dung dịch HNO_{3} loãng. Có bao nhiêu trường hợp xảy ra phản ứng oxi hóa – khử?","kind":"num","ans":"4","note":"Các chất có tính khử: Cu, Al, Fe_{3}O_{4}, Fe(OH)_{2} tác dụng với HNO_{3} loãng tạo phản ứng oxi hóa – khử (4 chất). MgO, CaCO_{3} chỉ xảy ra phản ứng trao đổi; K_{2}SO_{4} không phản ứng.","tol":0,"id":112},{"type":"short","lesson":"Nitrogen và hợp chất","q":"Cho phản ứng: aFe + bHNO_{3} → cFe(NO_{3})_{3} + dNO_{2}↑ + eH_{2}O. Hệ số tỉ lượng a, b, c, d, e là những số nguyên dương có tỉ lệ tối giản. Tổng (a + b) bằng bao nhiêu?","kind":"num","ans":"7","note":"Phản ứng: Fe + 6HNO_{3} → Fe(NO_{3})_{3} + 3NO_{2} + 3H_{2}O. Tỉ lệ tối giản a = 1, b = 6 ⇒ a + b = 7.","tol":0,"id":113},{"type":"short","lesson":"Nitrogen và hợp chất","q":"Cho m gam Al phản ứng hoàn toàn với dung dịch HNO_{3} loãng dư, thu được 4,958 lít khí NO (đkc, sản phẩm khử duy nhất). Giá trị của m bằng bao nhiêu?","kind":"num","ans":"5.4","note":"n(NO) = 4,958/24,79 = 0,2 mol. Bảo toàn electron: 3 × n(Al) = 3 × n(NO) ⇒ n(Al) = 0,2 mol. m(Al) = 0,2 × 27 = 5,4 g.","unit":"gam","tol":0.01,"id":114},{"type":"short","lesson":"Nitrogen và hợp chất","q":"Cho 2,19 gam hỗn hợp gồm Cu, Al tác dụng hoàn toàn với dung dịch HNO_{3} dư, thu được dung dịch X và 0,03 mol khí NO (sản phẩm khử duy nhất). Khối lượng muối trong X là bao nhiêu gam?","kind":"num","ans":"7.77","note":"n(NO_{3}^{−} trong muối) = n(electron nhường) = 3 × n(NO) = 0,09 mol. m(muối) = m(kim loại) + m(NO_{3}^{−}) = 2,19 + 0,09 × 62 = 7,77 g.","unit":"gam","tol":0.01,"id":115},{"type":"short","lesson":"Sulfur và hợp chất","q":"Cho các phản ứng:\n(1) S + O_{2} → SO_{2}\n(2) S + 3F_{2} → SF_{6}\n(3) Hg + S → HgS\n(4) H_{2} + 1/8 S_{8} → H_{2}S\nHãy sắp xếp các phản ứng trong đó sulfur đơn chất đóng vai trò chất khử thành bộ số theo thứ tự tăng dần.","kind":"digits","ans":"12","note":"Trong (1) và (2), S tăng số oxi hóa từ 0 lên +4 và +6 nên S là chất khử. Trong (3) và (4), S giảm từ 0 xuống −2 nên S là chất oxi hóa.","src":"KNTT – SBT","id":116},{"type":"short","lesson":"Sulfur và hợp chất","q":"Cho các phản ứng sinh ra khí SO_{2}:\n(1) 4FeS_{2} + 11O_{2} → 2Fe_{2}O_{3} + 8SO_{2}\n(2) S + O_{2} → SO_{2}\n(3) Cu + 2H_{2}SO_{4} → CuSO_{4} + SO_{2} + 2H_{2}O\n(4) Na_{2}SO_{3} + H_{2}SO_{4} → Na_{2}SO_{4} + SO_{2} + H_{2}O\nHãy sắp xếp các phản ứng dùng để điều chế khí SO_{2} trong công nghiệp thành bộ số theo thứ tự tăng dần.","kind":"digits","ans":"12","note":"Trong công nghiệp, SO_{2} được sản xuất từ đốt quặng pyrite (1) và đốt sulfur (2). Phản ứng (3), (4) dùng điều chế SO_{2} trong phòng thí nghiệm.","id":117},{"type":"short","lesson":"Sulfur và hợp chất","q":"Cho các phát biểu sau:\n(1) Sulfur là chất rắn, màu trắng, không tan trong nước.\n(2) Sulfur và sulfur dioxide vừa có tính oxi hóa, vừa có tính khử.\n(3) Khi phản ứng với hydrogen, sulfur thể hiện tính oxi hóa.\n(4) Nước thải sinh hoạt là một trong các nguồn phát thải khí SO_{2}.\n(5) Sulfur dioxide được sử dụng để tẩy trắng vải sợi, bột giấy, sản xuất sulfuric acid,…\nHãy sắp xếp các phát biểu đúng thành bộ số theo thứ tự tăng dần.","kind":"digits","ans":"235","note":"(1) sai: sulfur có màu vàng; (4) sai: nước thải sinh hoạt không phát thải SO_{2} (có thể sinh ra H_{2}S); SO_{2} phát thải chủ yếu từ đốt nhiên liệu hóa thạch, luyện kim, nhà máy công nghiệp. Các phát biểu (2), (3), (5) đúng.","src":"KNTT – SBT","id":118},{"type":"short","lesson":"Sulfur và hợp chất","q":"Cho các phát biểu sau:\n(1) Trong tự nhiên, sulfur tồn tại chủ yếu ở dạng muối sulfide và muối sulfate,…\n(2) Là một phi kim hoạt động nên trong tự nhiên không tìm thấy sulfur đơn chất.\n(3) Trứng gà ung có mùi thối đặc trưng một phần do các hợp chất của sulfur,…\n(4) Nguyên tố sulfur có mặt trong một số loại thực vật (hành, tỏi, sầu riêng,…).\n(5) Thành phần chính của quặng pyrite là hợp chất của sulfur và chì (lead, Pb).\nHãy sắp xếp các phát biểu đúng thành bộ số theo thứ tự tăng dần.","kind":"digits","ans":"134","note":"(2) sai: có mỏ sulfur đơn chất; (5) sai: pyrite là FeS_{2}, không phải hợp chất của chì. Các phát biểu (1), (3), (4) đúng.","id":119},{"type":"short","lesson":"Sulfuric acid và muối sulfate","q":"Cho các chất: (1) Cu, (2) Fe, (3) MgO, (4) NaOH, (5) KNO_{3}, (6) CaCO_{3} lần lượt tác dụng dung dịch H_{2}SO_{4} loãng. Hãy sắp xếp các trường hợp xảy ra phản ứng thành bộ số theo thứ tự tăng dần.","kind":"digits","ans":"2346","note":"Cu và KNO_{3} không phản ứng với H_{2}SO_{4} loãng. Các chất phản ứng là Fe (2), MgO (3), NaOH (4), CaCO_{3} (6).","id":120}];
 const N = Q.length;
 const LESSONS = [...new Set(Q.map(q=>q.lesson))];
 const $ = (s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
 const store={get(k,d){try{const v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}},del(k){try{localStorage.removeItem(k)}catch(e){}}};
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+/* văn bản có công thức: _{2} = chỉ số dưới, ^{2+} = chỉ số trên */
+const rt=s=>esc(s).replace(/_\{([^}]*)\}/g,'<sub>$1</sub>').replace(/\^\{([^}]*)\}/g,'<sup>$1</sup>').replace(/\n/g,'<br>');
+const plain=s=>String(s).replace(/[_^]\{([^}]*)\}/g,'$1');
 const shuffle=a=>{a=[...a];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
 const I={
  ok:'<svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"/></svg>',
@@ -388,11 +450,21 @@ function showFsIntro(){
  const y=$('[data-o]',o);if(y)y.onclick=()=>{o.remove();FS.enter()};
 }
 
-let cfg=Object.assign({mode:'practice',shufQ:false,shufA:false,lessons:[],time:45},store.get('qz_cfg',{}));
+/* ================= ỨNG DỤNG ================= */
+const DATA_VER='hoa11-ch2-v1';
+const TYPES={mcq:'Trắc nghiệm',tf:'Đúng – Sai',short:'Trả lời ngắn'};
+const TFSCORE=[0,.1,.25,.5,1];           // thang điểm đúng/sai: 1 ý=0,1 · 2 ý=0,25 · 3 ý=0,5 · 4 ý=1
+const norm=s=>String(s).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/đ/g,'d');
+const fmtScore=x=>String(Math.round(x*100)/100).replace('.',',');
+const cntT=t=>Q.filter(q=>q.type===t).length;
+
+let cfg=Object.assign({mode:'practice',shufQ:false,shufA:false,lessons:[],types:[],count:0,time:45},store.get('hh_cfg',{}));
+cfg.lessons=(cfg.lessons||[]).filter(l=>LESSONS.includes(l));cfg.types=(cfg.types||[]).filter(t=>TYPES[t]);
+store.del('qz_sess');store.del('qz_cfg');store.del('qz_hist');   // dữ liệu cũ của bộ đề Tin học
 let S=null, tick=null, view='home', dirAnim='';
 const app=$('#app');
-const saveCfg=()=>store.set('qz_cfg',cfg);
-const saveS=()=>{if(S&&!S.done)store.set('qz_sess',S)};
+const saveCfg=()=>store.set('hh_cfg',cfg);
+const saveS=()=>{if(S&&!S.done)store.set('hh_sess',S)};
 
 /* ---------- modal & confetti ---------- */
 function confirmBox(title,text,okLabel,cb,cancelLabel='Quay lại'){
@@ -406,73 +478,156 @@ function confirmBox(title,text,okLabel,cb,cancelLabel='Quay lại'){
 function confetti(){const c=['#c8ff3d','#5b3df5','#ff5d8f','#ffb703','#2ec4b6'];
  for(let i=0;i<70;i++){const e=document.createElement('i');e.className='conf';e.style.cssText=`left:${Math.random()*100}vw;background:${c[i%5]};--dx:${(Math.random()-.5)*300}px;--rot:${Math.random()*900}deg;animation-duration:${2+Math.random()*2.2}s;animation-delay:${Math.random()*.5}s;border-radius:${i%3?'2px':'50%'}`;document.body.appendChild(e);setTimeout(()=>e.remove(),5000)}}
 
+/* ---------- LOGIC CHẤM ĐIỂM ---------- */
+const newRec=q=>q.type==='tf'?{pick:[null,null,null,null],checked:false,flag:false}
+ :q.type==='short'?{val:'',tries:[],solved:false,revealed:false,flag:false}
+ :{tries:[],solved:false,revealed:false,pick:null,flag:false};
+function shortRight(q,v){
+ v=String(v||'').trim();if(!v)return false;
+ if(q.kind==='digits')return v.replace(/\D/g,'')===q.ans;
+ const m=v.replace(/\s+/g,'').match(/[-−]?\d+(?:[.,]\d+)?/);if(!m)return false;
+ const x=parseFloat(m[0].replace('−','-').replace(',','.'));
+ return Math.abs(x-parseFloat(q.ans))<=(q.tol||0)+1e-9;
+}
+const ansText=q=>q.kind==='digits'?q.ans:q.ans.replace('.',',');
+const tfCount=(q,pick)=>q.s.reduce((n,s,i)=>n+(pick[i]===s.v?1:0),0);
+function isDone(s,id){const r=s.rec[id],q=Q[id],ex=s.mode==='exam';
+ if(q.type==='mcq')return ex?r.pick!==null:(r.solved||r.revealed);
+ if(q.type==='tf')return ex?r.pick.some(x=>x!==null):r.checked;
+ return ex?String(r.val).trim()!=='':(r.solved||r.revealed)}
+function doneCount(s){return s.ids.filter(id=>isDone(s,id)).length}
+function status(id){const r=S.rec[id],q=Q[id];
+ if(S.mode==='exam'){
+  if(!isDone(S,id))return 'skip';
+  if(q.type==='mcq')return r.pick===q.a?'ok':'bad';
+  if(q.type==='tf')return tfCount(q,r.pick)===4?'ok':'bad';
+  return shortRight(q,r.val)?'ok':'bad'}
+ if(q.type==='tf')return r.checked?(tfCount(q,r.pick)===4?'ok':'bad'):'skip';
+ if(r.tries.length)return 'bad';
+ return r.solved?'ok':'skip'}
+function qScore(id){            // điểm của câu (0..1) khi thi
+ const r=S.rec[id],q=Q[id],st=status(id);
+ if(q.type==='tf'){return isDone(S,id)?TFSCORE[tfCount(q,r.pick)]:0}
+ return st==='ok'?1:0}
+const fmt=s=>{s=Math.max(0,Math.round(s));const m=Math.floor(s/60);return String(m).padStart(2,'0')+':'+String(s%60).padStart(2,'0')};
+
 /* ---------- HOME ---------- */
-function pool(){return Q.filter(q=>!cfg.lessons.length||cfg.lessons.includes(q.lesson)).map(q=>q.id-1)}
+function poolAll(){return Q.filter(q=>(!cfg.lessons.length||cfg.lessons.includes(q.lesson))&&(!cfg.types.length||cfg.types.includes(q.type))).map(q=>q.id)}
+function pickIds(){let b=poolAll();if(cfg.count>0&&cfg.count<b.length)b=shuffle(b).slice(0,cfg.count).sort((x,y)=>x-y);return b}
+function validSaved(){
+ const s=store.get('hh_sess',null);
+ if(!s||s.done||s.ver!==DATA_VER||!Array.isArray(s.ids)||!s.ids.length||!s.rec)return null;
+ return s.ids.every(id=>Q[id]&&s.rec[id])?s:null}
+const chip=(attr,val,label,on)=>`<button class="chip ${on?'on':''}" ${attr}="${esc(val)}">${label}</button>`;
+const typeChips=()=>Object.keys(TYPES).map(t=>chip('data-ty',t,`${TYPES[t]} · ${cntT(t)}`,cfg.types.includes(t))).join('');
+const lessonChips=()=>LESSONS.map(l=>chip('data-l',l,`${esc(l)} · ${Q.filter(q=>q.lesson===l).length}`,cfg.lessons.includes(l))).join('');
+function bindFilters(rerender){
+ $$('[data-ty]').forEach(b=>b.onclick=()=>{const t=b.dataset.ty;cfg.types=cfg.types.includes(t)?cfg.types.filter(x=>x!==t):[...cfg.types,t];saveCfg();rerender()});
+ $$('[data-l]').forEach(b=>b.onclick=()=>{const l=b.dataset.l;cfg.lessons=cfg.lessons.includes(l)?cfg.lessons.filter(x=>x!==l):[...cfg.lessons,l];saveCfg();rerender()});
+}
 function renderHome(){
  view='home';wakeSync();clearInterval(tick);
- const saved=store.get('qz_sess',null), hist=store.get('qz_hist',{best:null,exams:0,practices:0});
- const P=pool().length;
+ const saved=validSaved(), hist=store.get('hh_hist',{best:null,exams:0,practices:0});
+ const P=poolAll().length, run=cfg.count>0?Math.min(cfg.count,P):P;
  app.innerHTML=`<div class="view">
- <div class="nav"><div class="logo"><i>&lt;/&gt;</i><span>Ôn Tin học</span></div>${themeBtn()}</div>
+ <div class="nav"><div class="logo"><i>H<sub>2</sub></i><span>Ôn Hóa học 11</span></div>${themeBtn()}</div>
  <section class="hero">
   <div class="card hero-main">
-   <h1>Ôn tập Tin học</h1>
-   <p class="lead">${N} câu trắc nghiệm kèm đáp án và ghi chú. Chọn chế độ bên dưới để bắt đầu.</p></div>
+   <span class="tag">CHƯƠNG 2 · NITROGEN &amp; SULFUR</span>
+   <h1 style="margin-top:12px">Ôn tập Hóa học 11</h1>
+   <p class="lead">${cntT('mcq')} câu trắc nghiệm · ${cntT('tf')} câu đúng – sai · ${cntT('short')} câu trả lời ngắn, kèm đáp án và lời giải. Chọn chế độ bên dưới để bắt đầu.</p></div>
   <div class="stats">
    <div class="card stat"><b>${N}</b><span>câu hỏi<br>trong đề</span></div>
-   <div class="card stat"><b>${LESSONS.length}</b><span>bài học<br>được phủ</span></div>
-   <div class="card stat"><b>${hist.best===null?'–':hist.best.toFixed(1).replace('.0','')}</b><span>điểm thi<br>cao nhất /10</span></div>
+   <div class="card stat"><b>${Object.keys(TYPES).length}</b><span>dạng câu hỏi<br>TN · Đ/S · TLN</span></div>
+   <div class="card stat"><b>${hist.best===null?'–':fmtScore(hist.best)}</b><span>điểm thi<br>cao nhất /10</span></div>
   </div>
  </section>
- ${saved&&!saved.done?`<div class="card resume"><div><b>Bạn đang làm dở một bài ${saved.mode==='exam'?'thi':'luyện tập'}</b><br><small>Đã làm ${doneCount(saved)}/${saved.ids.length} câu</small></div><div class="btns" style="display:flex;gap:10px"><button class="btn sm" id="discard">Bỏ bài này</button><button class="btn sm pri" id="resume">Tiếp tục</button></div></div>`:''}
+ ${saved?`<div class="card resume"><div><b>Bạn đang làm dở một bài ${saved.mode==='exam'?'thi':'luyện tập'}</b><br><small>Đã làm ${doneCount(saved)}/${saved.ids.length} câu</small></div><div class="btns" style="display:flex;gap:10px"><button class="btn sm" id="discard">Bỏ bài này</button><button class="btn sm pri" id="resume">Tiếp tục</button></div></div>`:''}
  <div class="sec-t">01 — Chọn chế độ</div>
  <div class="modes">
   <button class="card mode ${cfg.mode==='practice'?'on':''}" data-mode="practice"><span class="chk">${I.ok}</span><div class="big">${I.bolt}</div><h3>Luyện tập</h3><p>Làm đến đâu biết đáp án đến đó.</p>
-   <ul><li>Biết đúng/sai ngay lập tức</li><li>Sai thì được thử lại, có ghi chú giải thích</li><li>Xem lại câu đã làm, lọc riêng câu sai</li><li>Xáo đề và làm lại các câu sai</li></ul></button>
+   <ul><li>Biết đúng/sai ngay, có lời giải từng ý</li><li>Trắc nghiệm &amp; trả lời ngắn: sai thì được thử lại</li><li>Xem lại câu đã làm, lọc riêng câu sai</li><li>Xáo đề và làm lại các câu sai</li></ul></button>
   <button class="card mode ${cfg.mode==='exam'?'on':''}" data-mode="exam"><span class="chk">${I.ok}</span><div class="big">${I.clock}</div><h3>Thi thật</h3><p>Không hiện đáp án cho đến khi nộp bài.</p>
-   <ul><li>Tính giờ, tự nộp khi hết giờ</li><li>Đánh dấu câu cần xem lại, đổi đáp án thoải mái</li><li>Chấm điểm thang 10 sau khi nộp</li><li>Xáo thứ tự câu và/hoặc xáo đáp án</li></ul></button>
+   <ul><li>Tính giờ, tự nộp khi hết giờ</li><li>Đánh dấu câu cần xem lại, đổi đáp án thoải mái</li><li>Chấm thang 10 (đúng – sai tính điểm từng ý)</li><li>Xáo thứ tự câu và/hoặc xáo đáp án</li></ul></button>
  </div>
  <div class="sec-t">02 — Tùy chỉnh</div>
  <div class="card panel">
   <div class="switches">
    <button class="sw" role="switch" aria-checked="${cfg.shufQ}" data-sw="shufQ"><span><b>${I.shuf}Xáo thứ tự câu hỏi</b><small>Các câu hiện ra theo thứ tự ngẫu nhiên</small></span><span class="tg"></span></button>
-   <button class="sw" role="switch" aria-checked="${cfg.shufA}" data-sw="shufA"><span><b>${I.dice}Xáo nội dung đáp án</b><small>Đổi vị trí A, B, C, D của mỗi câu</small></span><span class="tg"></span></button>
+   <button class="sw" role="switch" aria-checked="${cfg.shufA}" data-sw="shufA"><span><b>${I.dice}Xáo nội dung đáp án</b><small>Đổi vị trí A, B, C, D của câu trắc nghiệm</small></span><span class="tg"></span></button>
   </div>
-  ${cfg.mode==='exam'?`<div><div class="sec-t" style="margin-top:0">Thời gian làm bài</div><div class="chips" id="times">${[[0,'Không giới hạn'],[15,'15 phút'],[30,'30 phút'],[45,'45 phút'],[60,'60 phút']].map(([v,l])=>`<button class="chip ${cfg.time===v?'on':''}" data-t="${v}">${l}</button>`).join('')}</div></div>`:''}
-  <div><div class="row"><div class="sec-t" style="margin:0 0 10px">Chọn bài (bỏ trống = tất cả)</div><button class="btn sm" id="allL">${cfg.lessons.length?'Bỏ chọn tất cả':'Chọn tất cả'}</button></div>
-   <div class="chips" id="lessons">${LESSONS.map(l=>`<button class="chip ${cfg.lessons.includes(l)?'on':''}" data-l="${esc(l)}">${esc(l)} · ${Q.filter(q=>q.lesson===l).length}</button>`).join('')}</div></div>
+  ${cfg.mode==='exam'?`<div><div class="sec-t" style="margin-top:0">Thời gian làm bài</div><div class="chips" id="times">${[[0,'Không giới hạn'],[15,'15 phút'],[30,'30 phút'],[45,'45 phút'],[60,'60 phút'],[90,'90 phút']].map(([v,l])=>`<button class="chip ${cfg.time===v?'on':''}" data-t="${v}">${l}</button>`).join('')}</div></div>`:''}
+  <div><div class="sec-t" style="margin:0 0 10px">Dạng câu hỏi (bỏ trống = tất cả)</div><div class="chips types" id="types">${typeChips()}</div></div>
+  <div><div class="sec-t" style="margin:0 0 10px">Số câu (lấy ngẫu nhiên từ các câu đã chọn)</div><div class="chips" id="counts">${[[0,'Tất cả'],[10,'10 câu'],[20,'20 câu'],[30,'30 câu'],[40,'40 câu']].map(([v,l])=>`<button class="chip ${cfg.count===v?'on':''}" data-c="${v}">${l}</button>`).join('')}</div></div>
+  <div><div class="row"><div class="sec-t" style="margin:0 0 10px">Chuyên đề (bỏ trống = tất cả)</div><button class="btn sm" id="allL">${cfg.lessons.length?'Bỏ chọn tất cả':'Chọn tất cả'}</button></div>
+   <div class="chips" id="lessons">${lessonChips()}</div></div>
  </div>
- <div class="start"><div><b style="font-size:1.1rem">${P} câu</b> sẽ được làm · chế độ <b>${cfg.mode==='exam'?'Thi thật':'Luyện tập'}</b></div>
-  <button class="btn pri" id="go" ${P?'':'disabled'}>Bắt đầu ngay ${I.r}</button></div>
- <p class="foot">Mẹo: dùng phím 1–4 hoặc A–D để chọn đáp án, ← → để chuyển câu.</p>
+ <div class="start"><div><b style="font-size:1.1rem">${run} câu</b> sẽ được làm · chế độ <b>${cfg.mode==='exam'?'Thi thật':'Luyện tập'}</b>${cfg.count>0&&P>run?` · lấy ngẫu nhiên từ ${P} câu`:''}</div>
+  <div class="btns"><button class="btn sec" id="keybtn" ${P?'':'disabled'}>${I.eye} Xem đáp án &amp; in đề</button>
+  <button class="btn pri" id="go" ${P?'':'disabled'}>Bắt đầu ngay ${I.r}</button></div></div>
+ <p class="foot">Mẹo: dùng phím 1–4 hoặc A–D để chọn đáp án trắc nghiệm, ← → để chuyển câu, F để bật toàn màn hình.</p>
  </div>`;
  bindTheme();
  $$('[data-mode]').forEach(b=>b.onclick=()=>{cfg.mode=b.dataset.mode;saveCfg();renderHome()});
  $$('[data-sw]').forEach(b=>b.onclick=()=>{const k=b.dataset.sw;cfg[k]=!cfg[k];saveCfg();b.setAttribute('aria-checked',cfg[k])});
  $$('[data-t]').forEach(b=>b.onclick=()=>{cfg.time=+b.dataset.t;saveCfg();renderHome()});
- $$('[data-l]').forEach(b=>b.onclick=()=>{const l=b.dataset.l;cfg.lessons=cfg.lessons.includes(l)?cfg.lessons.filter(x=>x!==l):[...cfg.lessons,l];saveCfg();renderHome()});
+ $$('[data-c]').forEach(b=>b.onclick=()=>{cfg.count=+b.dataset.c;saveCfg();renderHome()});
+ bindFilters(renderHome);
  $('#allL').onclick=()=>{cfg.lessons=cfg.lessons.length?[]:[...LESSONS];saveCfg();renderHome()};
- $('#go').onclick=()=>startSession(pool(),cfg.mode,cfg.shufQ,cfg.shufA,cfg.time);
- const r=$('#resume');if(r){r.onclick=()=>{if(ST.autoFs)FS.enter();S=saved;S.done=false;resumeTimer()};$('#discard').onclick=()=>{store.del('qz_sess');renderHome()}}
+ $('#go').onclick=()=>startSession(pickIds(),cfg.mode,cfg.shufQ,cfg.shufA,cfg.time);
+ $('#keybtn').onclick=()=>{keyQ='';renderKey()};
+ const r=$('#resume');if(r){r.onclick=()=>{if(ST.autoFs)FS.enter();S=saved;S.done=false;resumeTimer()};$('#discard').onclick=()=>{store.del('hh_sess');renderHome()}}
 }
-function doneCount(s){return s.ids.filter(id=>{const r=s.rec[id];return s.mode==='exam'?r.pick!==null:(r.solved||r.revealed)}).length}
+
+/* ---------- XEM ĐÁP ÁN / IN ĐỀ (dành cho giáo viên) ---------- */
+let keyQ='';
+function searchText(q){return [q.q,...(q.o||[]),...(q.s||[]).flatMap(s=>[s.t,s.n]),q.ans||'',q.note||'',q.lesson].join(' ')}
+function keyHtml(q,n){
+ let body='';
+ if(q.type==='mcq'){
+  body=`<div class="opts">${q.o.map((o,i)=>`<div class="opt ${i===q.a?'ok':'dim'}"><span class="k">${'ABCD'[i]}</span><span class="t">${rt(o)}</span><span class="s">${i===q.a?I.ok:''}</span></div>`).join('')}</div>`+(q.note?`<div class="fb info"><div class="note" style="margin:0">${rt(q.note)}</div></div>`:'');
+ }else if(q.type==='tf'){
+  body=`<div class="tfrows">${q.s.map((s,i)=>`<div class="tfrow static ${s.v?'ok':'bad'}"><span class="k">${'abcd'[i]}</span><div class="stx"><span class="vb ${s.v?'t':'f'}">${s.v?'ĐÚNG':'SAI'}</span>${rt(s.t)}</div>${s.n?`<div class="tfnote">${rt(s.n)}</div>`:''}</div>`).join('')}</div>`;
+ }else{
+  body=`<div class="shortbox ok"><small>Đáp án</small><b style="font-size:1.25rem">${esc(ansText(q))}</b>${q.unit?` <span class="unit">${rt(q.unit)}</span>`:''}</div><div class="fb info"><div class="note" style="margin:0">${rt(q.note)}</div></div>`;
+ }
+ return `<article class="card rvi static" style="--i:${Math.min(n,10)}"><div class="qmeta"><span class="qn">Câu ${n+1}</span><span class="tt ${q.type}">${TYPES[q.type]}</span><span class="lesson">${esc(q.lesson)}${q.src?` · ${esc(q.src)}`:''}</span></div><div class="qtext">${rt(q.q)}</div>${body}</article>`;
+}
+function drawKeyList(){
+ const nq=norm(keyQ.trim());
+ const ids=poolAll().filter(id=>!nq||norm(plain(searchText(Q[id]))).includes(nq));
+ $('#kcount').innerHTML=`<b>${ids.length}</b> câu${keyQ.trim()?` khớp “${esc(keyQ.trim())}”`:''}`;
+ $('#kl').innerHTML=ids.length?ids.map((id,n)=>keyHtml(Q[id],n)).join(''):`<div class="card empty">Không có câu nào khớp.</div>`;
+}
+function renderKey(){
+ view='key';wakeSync();clearInterval(tick);scrollTo(0,0);
+ app.innerHTML=`<div class="view">
+ <div class="nav"><div class="row" style="gap:12px;justify-content:flex-start"><button class="btn ico noprint" id="kback" aria-label="Về trang chủ">${I.home}</button><div class="logo"><i>✓</i><span>Đáp án &amp; lời giải</span></div></div>${themeBtn()}</div>
+ <div class="kview noprint">
+  <input class="field" id="ksearch" type="search" placeholder="Tìm câu hỏi, công thức, từ khóa… (VD: oleum, H2SO4, thụ động)" value="${esc(keyQ)}" autocomplete="off">
+  <div><div class="sec-t" style="margin:0 0 8px">Dạng câu hỏi</div><div class="chips types">${typeChips()}</div></div>
+  <div><div class="sec-t" style="margin:0 0 8px">Chuyên đề</div><div class="chips">${lessonChips()}</div></div>
+ </div>
+ <div class="row" style="margin-bottom:6px"><span id="kcount"></span><button class="btn sm noprint" id="kprint">In / Lưu PDF</button></div>
+ <div class="rv" id="kl"></div></div>`;
+ bindTheme();bindFilters(renderKey);
+ $('#kback').onclick=renderHome;
+ $('#kprint').onclick=()=>print();
+ $('#ksearch').oninput=e=>{keyQ=e.target.value;drawKeyList()};
+ drawKeyList();
+}
 
 /* ---------- SESSION ---------- */
 function startSession(ids,mode,shufQ,shufA,time){
+ const orig=[...ids];
  ids=shufQ?shuffle(ids):[...ids];
  const perms={},rec={};
- ids.forEach(id=>{perms[id]=shufA?shuffle([0,1,2,3]):[0,1,2,3];rec[id]={tries:[],solved:false,revealed:false,pick:null,flag:false}});
- S={mode,ids,perms,rec,cur:0,start:Date.now(),deadline:(mode==='exam'&&time>0)?Date.now()+time*60000:0,done:false,time,shufQ,shufA};
+ ids.forEach(id=>{perms[id]=(shufA&&Q[id].type==='mcq')?shuffle([0,1,2,3]):[0,1,2,3];rec[id]=newRec(Q[id])});
+ S={ver:DATA_VER,mode,ids,orig,perms,rec,cur:0,start:Date.now(),deadline:(mode==='exam'&&time>0)?Date.now()+time*60000:0,done:false,time,shufQ,shufA};
  if(ST.autoFs)FS.enter();saveS();streak=0;Snd.start();renderQuiz();
 }
 function resumeTimer(){if(S.deadline&&Date.now()>=S.deadline){finish(true);return}renderQuiz()}
 const curId=()=>S.ids[S.cur];
-const isDone=id=>{const r=S.rec[id];return S.mode==='exam'?r.pick!==null:(r.solved||r.revealed)};
-function status(id){const r=S.rec[id],q=Q[id];
- if(S.mode==='exam'){return r.pick===null?'skip':(r.pick===q.a?'ok':'bad')}
- if(r.tries.length)return 'bad';
- return r.solved?'ok':'skip'}
-const fmt=s=>{s=Math.max(0,Math.round(s));const m=Math.floor(s/60);return String(m).padStart(2,'0')+':'+String(s%60).padStart(2,'0')};
 
 /* ---------- QUIZ ---------- */
 function renderQuiz(){
@@ -498,23 +653,24 @@ function renderQuiz(){
  $('#fin').onclick=askFinish;
  $('#prev').onclick=()=>go(S.cur-1);$('#next').onclick=()=>S.cur>=S.ids.length-1?askFinish():go(S.cur+1);
  if(ex&&S.deadline){let lastS=-1;const upd=()=>{const left=(S.deadline-Date.now())/1000;const sc=Math.ceil(left);if(sc!==lastS){lastS=sc;if(sc===60||sc===30)Snd.beep2();else if(sc>0&&sc<=10)Snd.warn()}const t=$('#tt');if(t)t.textContent=fmt(left);$('#timer')?.classList.toggle('low',left<=60);if(left<=0){clearInterval(tick);finish(true)}};upd();tick=setInterval(upd,500)}
- drawCard('');drawSide();
+ drawCard('',true);drawSide();
 }
 function go(i){if(i<0||i>=S.ids.length)return;Snd.nav();const d=i>S.cur?'slide-r':'slide-l';S.cur=i;saveS();drawCard(d,true);drawSide();scrollTo({top:0,behavior:'smooth'})}
 function drawSide(){
  const ex=S.mode==='exam';
  $('#ng').innerHTML=S.ids.map((id,i)=>{const r=S.rec[id];let c='nb';
-  if(ex){if(r.pick!==null)c+=' ans';if(r.flag)c+=' fl'}else{const st=status(id);if(st!=='skip')c+=' '+st;else if(r.tries.length)c+=' bad'}
+  if(ex){if(isDone(S,id))c+=' ans';if(r.flag)c+=' fl'}else{const st=status(id);if(st!=='skip')c+=' '+st}
   if(i===S.cur)c+=' cur';return `<button class="${c}" data-i="${i}" aria-label="Câu ${i+1}">${i+1}</button>`}).join('');
  $$('#ng .nb').forEach(b=>b.onclick=()=>go(+b.dataset.i));
- $('#lg').innerHTML=ex?`<span><i style="background:var(--acc)"></i>Đã chọn</span><span><i style="background:var(--warn)"></i>Cần xem lại</span><span><i></i>Chưa làm</span>`:`<span><i style="background:var(--ok)"></i>Đúng lần đầu</span><span><i style="background:var(--bad)"></i>Đã sai</span><span><i></i>Chưa làm</span>`;
+ $('#lg').innerHTML=ex?`<span><i style="background:var(--acc)"></i>Đã làm</span><span><i style="background:var(--warn)"></i>Cần xem lại</span><span><i></i>Chưa làm</span>`:`<span><i style="background:var(--ok)"></i>Đúng lần đầu</span><span><i style="background:var(--bad)"></i>Đã sai</span><span><i></i>Chưa làm</span>`;
  const d=doneCount(S),p=d/S.ids.length*100;
  $('#plbl').textContent=`Đã làm ${d}/${S.ids.length}`;$('#ppct').textContent=Math.round(p)+'%';$('#pbar').style.width=p+'%';
  $('#prev').disabled=S.cur===0;
  $('#next').innerHTML=S.cur>=S.ids.length-1?`${ex?'Nộp bài':'Hoàn thành'} ${I.ok}`:`Câu sau ${I.r}`;
 }
-function drawCard(anim,stagger,shakeOi=null){
- const id=curId(),q=Q[id],r=S.rec[id],perm=S.perms[id],ex=S.mode==='exam';
+const noteBox=q=>q.note?`<div class="note">${rt(q.note)}</div>`:'';
+
+function mcqHtml(q,r,perm,ex,shakeOi,stagger,anim){
  const locked=!ex&&(r.solved||r.revealed);
  const opts=perm.map((oi,pos)=>{
   let c='opt',ic='',dis='';
@@ -524,29 +680,97 @@ function drawCard(anim,stagger,shakeOi=null){
    else if(r.tries.includes(oi)){c+=' bad';ic=I.x;dis='disabled'}
   }
   if(shakeOi===oi)c+=' shake';
-  return `<button class="${c}" data-o="${oi}" ${dis}><span class="k">${'ABCD'[pos]}</span><span class="t">${esc(q.o[oi])}</span><span class="s">${ic}</span></button>`}).join('');
+  return `<button class="${c}" style="--i:${pos}" data-o="${oi}" ${dis}><span class="k">${'ABCD'[pos]}</span><span class="t">${rt(q.o[oi])}</span><span class="s">${ic}</span></button>`}).join('');
  let fb='';
  if(!ex){
   const letter='ABCD'[perm.indexOf(q.a)];
-  if(r.solved)fb=`<div class="fb ok"><b>${r.tries.length?`Đúng rồi! (sau ${r.tries.length+1} lần thử)`:'Chính xác!'}</b>Đáp án đúng: <b style="display:inline">${letter}</b><div class="note">${esc(q.note)}</div></div>`;
-  else if(r.revealed)fb=`<div class="fb info"><b>Đáp án đúng là ${letter}</b><div class="note">${esc(q.note)}</div></div>`;
+  if(r.solved)fb=`<div class="fb ok"><b>${r.tries.length?`Đúng rồi! (sau ${r.tries.length+1} lần thử)`:'Chính xác!'}</b>Đáp án đúng: <b style="display:inline">${letter}</b>${noteBox(q)}</div>`;
+  else if(r.revealed)fb=`<div class="fb info"><b>Đáp án đúng là ${letter}</b>${noteBox(q)}</div>`;
   else if(r.tries.length)fb=`<div class="fb bad"><b>Chưa đúng — thử chọn lại nhé!</b><button class="btn sm" id="reveal">${I.eye} Xem đáp án</button></div>`;
  }
+ return `<div class="opts ${stagger?'in':''}">${opts}</div>${fb}`;
+}
+function tfHtml(q,r,ex){
+ const done=!ex&&r.checked;
+ const rows=q.s.map((s,i)=>{
+  const p=r.pick[i];let c='tfrow';
+  if(done)c+=p===s.v?' ok':' bad';
+  const btn=(val,label)=>{let bc='tfb';if(p===val)bc+=' sel';
+   if(done){bc=bc.replace(' sel','');if(s.v===val)bc+=' ok';else if(p===val)bc+=' bad';else bc+=' dim'}
+   return `<button class="${bc}" data-i="${i}" data-v="${val?1:0}" aria-pressed="${p===val}" ${done?'disabled':''}>${label}</button>`};
+  return `<div class="${c}"><span class="k">${'abcd'[i]}</span><div class="stx">${rt(s.t)}</div><div class="tfbtns">${btn(true,'Đúng')}${btn(false,'Sai')}</div>${done&&s.n?`<div class="tfnote">${rt(s.n)}</div>`:''}</div>`}).join('');
+ let extra='';
+ if(!ex){
+  if(!r.checked)extra=`<div class="qactions"><span class="hint" style="margin:0">Chọn Đúng hoặc Sai cho cả 4 ý, rồi bấm Kiểm tra.</span><button class="btn pri" id="chk" ${r.pick.every(x=>x!==null)?'':'disabled'}>Kiểm tra đáp án</button></div>`;
+  else{const n=tfCount(q,r.pick);extra=n===4?`<div class="fb ok"><b>Chính xác cả 4 ý!</b></div>`:`<div class="fb info"><b>Đúng ${n}/4 ý</b>Xem lời giải từng ý ở trên.</div>`}
+ }
+ return `<div class="tfrows">${rows}</div>${extra}`;
+}
+function shortHtml(q,r,ex,shake){
+ const locked=!ex&&(r.solved||r.revealed);
+ const hint=q.kind==='digits'?'Nhập các chữ số liền nhau, theo thứ tự tăng dần (ví dụ: 134).':'Nhập đáp số (dấu thập phân là dấu phẩy hoặc dấu chấm).';
+ let fb='';
+ if(!ex){
+  const a=`<div class="ansline">Đáp án: <b>${esc(ansText(q))}</b>${q.unit?` ${rt(q.unit)}`:''}</div>`;
+  if(r.solved)fb=`<div class="fb ok"><b>${r.tries.length?`Đúng rồi! (sau ${r.tries.length+1} lần thử)`:'Chính xác!'}</b>${a}${noteBox(q)}</div>`;
+  else if(r.revealed)fb=`<div class="fb info"><b>Đáp án của câu này</b>${a}${noteBox(q)}</div>`;
+  else if(r.tries.length)fb=`<div class="fb bad"><b>Chưa đúng — kiểm tra lại nhé!</b><button class="btn sm" id="reveal">${I.eye} Xem đáp án</button></div>`;
+ }
+ return `<div class="shortrow"><input id="sa" class="sa ${shake?'shake':''}" type="text" inputmode="${q.kind==='digits'?'numeric':'decimal'}" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="${q.kind==='digits'?'VD: 134':'Đáp số'}" aria-label="Câu trả lời" value="${esc(r.val)}" ${locked?'disabled':''}>${q.unit?`<span class="unit">${rt(q.unit)}</span>`:''}${!ex&&!locked?`<button class="btn pri" id="chk">Kiểm tra</button>`:''}</div><div class="hint">${hint}</div>${fb}`;
+}
+function drawCard(anim,stagger,shakeOi=null){
+ const id=curId(),q=Q[id],r=S.rec[id],perm=S.perms[id],ex=S.mode==='exam';
+ let body='';
+ if(q.type==='mcq')body=mcqHtml(q,r,perm,ex,shakeOi,stagger,anim);
+ else if(q.type==='tf')body=tfHtml(q,r,ex);
+ else body=shortHtml(q,r,ex,shakeOi);
+ const actions=ex?`<div class="qactions"><button class="btn sm flag ${r.flag?'on':''}" id="flag">${I.flag} ${r.flag?'Đã đánh dấu xem lại':'Đánh dấu xem lại'}</button><button class="btn sm" id="clr" ${isDone(S,id)?'':'disabled'}>Bỏ chọn</button></div>`:'';
  $('#card').className='card qcard '+anim;
- $('#card').innerHTML=`<div class="qmeta"><span class="qn">Câu ${S.cur+1}<span style="opacity:.6;font-weight:600">/${S.ids.length}</span></span><span class="lesson">${esc(q.lesson)}</span></div>
-  <div class="qtext">${esc(q.q)}</div><div class="opts ${stagger||!anim&&!shakeOi?'in':''}">${opts}</div>${fb}
-  ${ex?`<div class="qactions"><button class="btn sm flag ${r.flag?'on':''}" id="flag">${I.flag} ${r.flag?'Đã đánh dấu xem lại':'Đánh dấu xem lại'}</button><button class="btn sm" id="clr" ${r.pick===null?'disabled':''}>Bỏ chọn</button></div>`:''}`;
+ $('#card').innerHTML=`<div class="qmeta"><span class="qn">Câu ${S.cur+1}<span style="opacity:.6;font-weight:600">/${S.ids.length}</span></span><span class="tt ${q.type}">${TYPES[q.type]}</span><span class="lesson">${esc(q.lesson)}${q.src?` · ${esc(q.src)}`:''}</span></div>
+  <div class="qtext">${rt(q.q)}</div>${body}${actions}`;
  $$('#card .opt').forEach(b=>b.onclick=()=>pick(+b.dataset.o));
+ $$('#card .tfb').forEach(b=>b.onclick=()=>pickTF(+b.dataset.i,b.dataset.v==='1'));
+ const sa=$('#sa');
+ if(sa&&!sa.disabled){
+  sa.oninput=()=>{r.val=sa.value;if(ex){saveS();drawSide();const c=$('#clr');if(c)c.disabled=sa.value.trim()===''}};
+  sa.onkeydown=e=>{if(e.key==='Enter'){e.preventDefault();if(ex){if(S.cur<S.ids.length-1)go(S.cur+1)}else checkShort()}};
+  if(shakeOi||matchMedia('(pointer:fine)').matches)sa.focus({preventScroll:true});
+  if(shakeOi)sa.select();
+ }
+ $('#chk')?.addEventListener('click',()=>q.type==='tf'?checkTF():checkShort());
  $('#reveal')?.addEventListener('click',()=>{Snd.reveal();r.revealed=true;saveS();drawCard('');drawSide()});
  $('#flag')?.addEventListener('click',()=>{Snd.flag();r.flag=!r.flag;saveS();drawCard('');drawSide()});
- $('#clr')?.addEventListener('click',()=>{Snd.pop();r.pick=null;saveS();drawCard('');drawSide()});
+ $('#clr')?.addEventListener('click',()=>{Snd.pop();
+  if(q.type==='mcq')r.pick=null;else if(q.type==='tf')r.pick=[null,null,null,null];else r.val='';
+  saveS();drawCard('');drawSide()});
 }
 function pick(oi){
  const id=curId(),q=Q[id],r=S.rec[id];
+ if(q.type!=='mcq')return;
  if(S.mode==='exam'){Snd.pop();r.pick=(r.pick===oi)?null:oi;saveS();drawCard('');drawSide();return}
  if(r.solved||r.revealed||r.tries.includes(oi))return;
  if(oi===q.a){streak=r.tries.length?0:streak+1;Snd.correct(streak-1<0?0:streak-1);r.solved=true;saveS();drawCard('');drawSide()}
  else{streak=0;Snd.wrong();r.tries.push(oi);saveS();drawCard('',false,oi);drawSide()}
+}
+function pickTF(i,v){
+ const id=curId(),q=Q[id],r=S.rec[id];
+ if(q.type!=='tf'||(S.mode!=='exam'&&r.checked))return;
+ Snd.pop();r.pick[i]=(r.pick[i]===v)?null:v;saveS();drawCard('');drawSide();
+}
+function checkTF(){
+ const id=curId(),q=Q[id],r=S.rec[id];
+ if(r.checked||!r.pick.every(x=>x!==null))return;
+ r.checked=true;
+ if(tfCount(q,r.pick)===4){streak++;Snd.correct(Math.max(0,streak-1))}else{streak=0;Snd.wrong()}
+ saveS();drawCard('');drawSide();
+}
+function checkShort(){
+ const id=curId(),q=Q[id],r=S.rec[id];
+ if(r.solved||r.revealed)return;
+ const v=String(r.val).trim();
+ if(!v){Snd.warn();$('#sa')?.focus();return}
+ if(shortRight(q,v)){streak=r.tries.length?0:streak+1;Snd.correct(Math.max(0,streak-1));r.solved=true;saveS();drawCard('');drawSide()}
+ else{streak=0;Snd.wrong();r.tries.push(v);saveS();drawCard('',false,true);drawSide()}
 }
 function askFinish(){
  const left=S.ids.length-doneCount(S),fl=S.ids.filter(id=>S.rec[id].flag).length;
@@ -555,11 +779,10 @@ function askFinish(){
  confirmBox(S.mode==='exam'?(early?'Nộp bài sớm?':'Nộp bài thi?'):'Kết thúc luyện tập?',msg+early+(S.mode==='exam'?' Sau khi nộp sẽ không sửa được.':''),S.mode==='exam'?'Nộp bài':'Xem kết quả',()=>finish(false));
 }
 function finish(auto){
- clearInterval(tick);if(auto)Snd.timeup();else Snd.submit();S.done=true;S.end=Date.now();store.del('qz_sess');
- const h=store.get('qz_hist',{best:null,exams:0,practices:0});
- const ok=S.ids.filter(id=>status(id)==='ok').length;
- if(S.mode==='exam'){h.exams++;const sc=ok/S.ids.length*10;if(h.best===null||sc>h.best)h.best=Math.round(sc*100)/100}else h.practices++;
- store.set('qz_hist',h);
+ clearInterval(tick);if(auto)Snd.timeup();else Snd.submit();S.done=true;S.end=Date.now();store.del('hh_sess');
+ const h=store.get('hh_hist',{best:null,exams:0,practices:0});
+ if(S.mode==='exam'){h.exams++;const sc=S.ids.reduce((a,id)=>a+qScore(id),0)/S.ids.length*10;if(h.best===null||sc>h.best)h.best=Math.round(sc*100)/100}else h.practices++;
+ store.set('hh_hist',h);
  renderResult(auto);
 }
 
@@ -570,17 +793,18 @@ function renderResult(auto){
  const ex=S.mode==='exam',T=S.ids.length;
  const st=S.ids.map(id=>status(id));
  const ok=st.filter(x=>x==='ok').length,bad=st.filter(x=>x==='bad').length,skip=st.filter(x=>x==='skip').length;
- const pct=Math.round(ok/T*100),wrongIds=S.ids.filter((id,i)=>st[i]!=='ok');
- const score=(ok/T*10).toFixed(1).replace('.0','');
- const msg=pct===100?['Tuyệt đối!','Không sai câu nào — quá đỉnh!']:pct>=80?['Xuất sắc!','Chỉ cần ôn thêm vài câu nữa là hoàn hảo.']:pct>=50?['Khá tốt!','Xem lại các câu sai rồi làm lại để chắc hơn nhé.']:['Cố lên nào!','Đừng lo, ôn lại ghi chú rồi thử lại các câu sai.'];
+ const sum=ex?S.ids.reduce((a,id)=>a+qScore(id),0):ok;
+ const pct=Math.round(sum/T*100),wrongIds=S.ids.filter((id,i)=>st[i]!=='ok');
+ const score=fmtScore(sum/T*10);
+ const msg=pct===100?['Tuyệt đối!','Không sai câu nào — quá đỉnh!']:pct>=80?['Xuất sắc!','Chỉ cần ôn thêm vài câu nữa là hoàn hảo.']:pct>=50?['Khá tốt!','Xem lại các câu sai rồi làm lại để chắc hơn nhé.']:['Cố lên nào!','Đừng lo, ôn lại lời giải rồi thử lại các câu sai.'];
  const dur=fmt(((S.end||Date.now())-S.start)/1000);
  app.innerHTML=`<div class="view">
- <div class="nav"><div class="logo"><i>&lt;/&gt;</i><span>Kết quả ${ex?'bài thi':'luyện tập'}</span></div>${themeBtn()}</div>
+ <div class="nav"><div class="logo"><i>H<sub>2</sub></i><span>Kết quả ${ex?'bài thi':'luyện tập'}</span></div>${themeBtn()}</div>
  <section class="card rhero">
   <div class="ring"><svg viewBox="0 0 200 200"><circle class="tr" cx="100" cy="100" r="88"/><circle class="pg" id="pg" cx="100" cy="100" r="88"/></svg>
    <div class="c"><b id="sc">0</b><span>${ex?'ĐIỂM /10':'ĐÚNG LẦN ĐẦU'}</span></div></div>
   <div><h2>${auto?'Hết giờ! ':''}${msg[0]}</h2><p class="lead">${msg[1]}</p>
-   <div class="kp"><div class="g"><b>${ok}</b><small>${ex?'Đúng':'Đúng lần đầu'}</small></div><div class="r"><b>${bad}</b><small>${ex?'Sai':'Từng sai'}</small></div><div class="y"><b>${skip}</b><small>Bỏ trống</small></div><div><b class="mono" style="font-size:1.25rem">${dur}</b><small>Thời gian</small></div></div></div>
+   <div class="kp"><div class="g"><b>${ok}</b><small>${ex?'Đúng':'Đúng lần đầu'}</small></div><div class="r"><b>${bad}</b><small>${ex?'Sai / thiếu':'Từng sai'}</small></div><div class="y"><b>${skip}</b><small>Bỏ trống</small></div><div><b class="mono" style="font-size:1.25rem">${dur}</b><small>Thời gian</small></div></div></div>
  </section>
  <section class="card again">
   ${wrongIds.length?`<div><b style="font-family:var(--f-head);font-size:1.25rem">Làm lại ${wrongIds.length} câu chưa đúng</b><p class="lead" style="margin-top:2px">Chọn cách xáo rồi bắt đầu lại — chỉ gồm các câu sai và bỏ trống.</p></div>
@@ -599,37 +823,60 @@ function renderResult(auto){
  $$('[data-sw]').forEach(b=>b.onclick=()=>{const k=b.dataset.sw;cfg[k]=!cfg[k];saveCfg();b.setAttribute('aria-checked',cfg[k])});
  const t=ex?(S.time||0):0;
  $('#rp')?.addEventListener('click',()=>startSession(wrongIds,'practice',cfg.shufQ,cfg.shufA,0));
- $('#re')?.addEventListener('click',()=>startSession(wrongIds,'exam',cfg.shufQ,cfg.shufA,Math.min(cfg.time,0)||0));
- $('#all').onclick=()=>startSession(Q.map(q=>q.id-1),S.mode,cfg.shufQ,cfg.shufA,t);
+ $('#re')?.addEventListener('click',()=>startSession(wrongIds,'exam',cfg.shufQ,cfg.shufA,0));
+ $('#all').onclick=()=>startSession(S.orig||S.ids,S.mode,cfg.shufQ,cfg.shufA,t);
  $('#home').onclick=renderHome;
  requestAnimationFrame(()=>setTimeout(()=>{$('#pg').style.strokeDashoffset=553*(1-pct/100);
-  const target=ex?ok/T*10:ok,dec=ex?1:0,t0=performance.now();
-  const step=n=>{const k=Math.min(1,(n-t0)/1300),e=1-Math.pow(1-k,3);$('#sc').textContent=(target*e).toFixed(dec).replace(/\.0$/,'');if(k<1)requestAnimationFrame(step);else $('#sc').textContent=ex?score:ok};
+  const target=ex?sum/T*10:ok,t0=performance.now();
+  const step=n=>{const k=Math.min(1,(n-t0)/1300),e=1-Math.pow(1-k,3);$('#sc').textContent=ex?fmtScore(target*e):String(Math.round(target*e));if(k<1)requestAnimationFrame(step);else $('#sc').textContent=ex?score:String(ok)};
   requestAnimationFrame(step)},80));
  setTimeout(()=>Snd.result(pct),auto?1000:550);
  if(pct>=80)setTimeout(confetti,600);
+}
+function reviewBody(id){
+ const q=Q[id],r=S.rec[id],perm=S.perms[id],ex=S.mode==='exam';
+ if(q.type==='mcq'){
+  const wrongPicks=ex?(r.pick!==null&&r.pick!==q.a?[r.pick]:[]):r.tries;
+  return `<div class="opts">${perm.map((oi,pos)=>{
+   let c='opt',ic='',tag='';
+   if(oi===q.a){c+=' ok';ic=I.ok}else if(wrongPicks.includes(oi)){c+=' bad';ic=I.x;tag=' <small>(bạn đã chọn)</small>'}else c+=' dim';
+   return `<div class="${c}"><span class="k">${'ABCD'[pos]}</span><span class="t">${rt(q.o[oi])}${tag}</span><span class="s">${ic}</span></div>`}).join('')}</div>`+(q.note?`<div class="fb info"><div class="note" style="margin:0">${rt(q.note)}</div></div>`:'');
+ }
+ if(q.type==='tf'){
+  const answered=ex?isDone(S,id):r.checked;
+  return `<div class="tfrows">${q.s.map((s,i)=>{
+   const p=r.pick[i];const good=answered&&p===s.v;
+   const you=!answered?'<small>(bạn chưa làm)</small>':p===null?'<small>(bạn bỏ trống)</small>':`<small>(bạn chọn ${p?'Đúng':'Sai'})</small>`;
+   return `<div class="tfrow static ${answered?(good?'ok':'bad'):''}"><span class="k">${'abcd'[i]}</span><div class="stx"><span class="vb ${s.v?'t':'f'}">${s.v?'ĐÚNG':'SAI'}</span>${rt(s.t)} ${you}</div>${s.n?`<div class="tfnote">${rt(s.n)}</div>`:''}</div>`}).join('')}</div>`
+   +(answered?`<div class="hint">Đúng ${tfCount(q,r.pick)}/4 ý${ex?` · được ${fmtScore(TFSCORE[tfCount(q,r.pick)])} điểm của câu`:''}.</div>`:'');
+ }
+ const given=ex?String(r.val).trim():(r.tries.length?r.tries[r.tries.length-1]:(r.solved?String(r.val).trim():''));
+ const right=ex?shortRight(q,r.val):r.solved&&!r.tries.length;
+ const tries=!ex&&r.tries.length?`<small>Các đáp án bạn đã thử: ${r.tries.map(t=>esc(t)).join(' · ')}</small>`:'';
+ return `<div class="shortbox ${isDone(S,id)||r.tries&&r.tries.length?(right?'ok':'bad'):''}"><small>Bạn trả lời</small><b>${given?esc(given):'(bỏ trống)'}</b>${tries}</div>
+  <div class="shortbox ok"><small>Đáp án đúng</small><b>${esc(ansText(q))}</b>${q.unit?` <span class="unit">${rt(q.unit)}</span>`:''}</div>
+  <div class="fb info"><div class="note" style="margin:0">${rt(q.note)}</div></div>`;
 }
 function drawReview(){
  const list=S.ids.map((id,i)=>({id,i,s:status(id)})).filter(x=>rvFilter==='all'||(rvFilter==='ok'?x.s==='ok':x.s!=='ok'));
  const ex=S.mode==='exam';
  $('#rv').innerHTML=list.length?list.map((x,n)=>{
-  const q=Q[x.id],r=S.rec[x.id],perm=S.perms[x.id];
-  const wrongPicks=ex?(r.pick!==null&&r.pick!==q.a?[r.pick]:[]):r.tries;
+  const q=Q[x.id],r=S.rec[x.id];
   const lab={ok:ex?'ĐÚNG':'ĐÚNG LẦN ĐẦU',bad:ex?'SAI':'TỪNG SAI',skip:'BỎ TRỐNG'}[x.s],cl={ok:'ok',bad:'bad',skip:'skip'}[x.s];
-  return `<article class="card rvi" style="--i:${Math.min(n,12)}"><div class="qmeta"><span class="qn">Câu ${x.i+1}</span><span class="st ${cl}">${lab}</span>${r.flag?`<span class="st skip">${I.flag} đã đánh dấu</span>`:''}<span class="lesson">${esc(q.lesson)}</span></div>
-  <div class="qtext">${esc(q.q)}</div><div class="opts">${perm.map((oi,pos)=>{
-   let c='opt',ic='',tag='';
-   if(oi===q.a){c+=' ok';ic=I.ok}else if(wrongPicks.includes(oi)){c+=' bad';ic=I.x;tag=' <small>(bạn đã chọn)</small>'}else c+=' dim';
-   return `<div class="${c}"><span class="k">${'ABCD'[pos]}</span><span class="t">${esc(q.o[oi])}${tag}</span><span class="s">${ic}</span></div>`}).join('')}</div>
-  <div class="fb info"><div class="note" style="margin:0">${esc(q.note)}</div></div></article>`}).join(''):`<div class="card empty">Không có câu nào trong mục này.</div>`;
+  return `<article class="card rvi" style="--i:${Math.min(n,12)}"><div class="qmeta"><span class="qn">Câu ${x.i+1}</span><span class="st ${cl}">${lab}</span><span class="tt ${q.type}">${TYPES[q.type]}</span>${r.flag?`<span class="st skip">${I.flag} đã đánh dấu</span>`:''}<span class="lesson">${esc(q.lesson)}</span></div>
+  <div class="qtext">${rt(q.q)}</div>${reviewBody(x.id)}</article>`}).join(''):`<div class="card empty">Không có câu nào trong mục này.</div>`;
 }
 
 /* ---------- KEYBOARD ---------- */
 addEventListener('keydown',e=>{
- if(e.key&&e.key.toLowerCase()==='f'&&!e.ctrlKey&&!e.metaKey&&!e.altKey&&FS.supported&&!$('#ov')&&!/INPUT|TEXTAREA/.test(e.target.tagName)){FS.toggle();return}
- if(view!=='quiz'||!S||$('#ov')||e.ctrlKey||e.metaKey||e.altKey)return;
- const k=e.key.toLowerCase(),i='1234'.indexOf(k)>=0&&k.length==1?'1234'.indexOf(k):'abcd'.indexOf(k);
- if(k.length===1&&i>=0){pick(S.perms[curId()][i]);return}
+ const inField=/INPUT|TEXTAREA/.test(e.target.tagName);
+ if(e.key&&e.key.toLowerCase()==='f'&&!e.ctrlKey&&!e.metaKey&&!e.altKey&&FS.supported&&!$('#ov')&&!inField){FS.toggle();return}
+ if(view!=='quiz'||!S||$('#ov')||e.ctrlKey||e.metaKey||e.altKey||inField)return;
+ const k=e.key.toLowerCase();
+ if(Q[curId()].type==='mcq'){
+  const i='1234'.indexOf(k)>=0&&k.length==1?'1234'.indexOf(k):'abcd'.indexOf(k);
+  if(k.length===1&&i>=0){pick(S.perms[curId()][i]);return}
+ }
  if(k==='arrowright'||k==='enter'&&!e.target.closest('button')){if(S.cur<S.ids.length-1)go(S.cur+1)}
  else if(k==='arrowleft')go(S.cur-1);
 });
